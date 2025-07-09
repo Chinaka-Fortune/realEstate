@@ -1,0 +1,31 @@
+.navbar-brand {
+    width: 15rem;
+}
+.navbar-brand img{
+    width: 100%;
+    height: 100%;
+}
+
+.dropdownMenuColor, .modalBackGround{
+    background-color: rgba(0,0,0,.8);
+    
+}
+.dropdownMenuColor li:hover, .dropdownMainColor li:hover{
+    background-color:blue
+    
+}
+
+.amountInput[type='number']{
+  padding-left: .5rem;
+}
+
+.amountInput{
+    width: 11.3rem;
+}
+
+@media (max-width:320px) {
+    .NavHamburger{
+    font-size:.9rem;
+    font-weight: 900;
+}
+}
