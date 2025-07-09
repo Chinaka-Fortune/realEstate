@@ -300,7 +300,7 @@ const NavBar = () => {
                           class="form-select normalFirstAnimationLeft"
                           aria-label="Default select example"
                         >
-                          <option selected>local Gov.</option>
+                          <option selected>local state</option>
                           <option value="1">Alimosho</option>
                           <option value="2">Agege</option>
                           <option value="3">Amuwo-Idofin</option>
