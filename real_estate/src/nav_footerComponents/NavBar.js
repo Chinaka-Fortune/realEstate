@@ -249,7 +249,7 @@ const NavBar = () => {
       >
         <div className="modal-dialog modal-dialog-centered">
           <div className="modal-content modalBackGround">
-            <form action="" className="p-5">
+            <form action="" className="p-md-5 px-2 py-4">
               <div className="container-fluid">
                 <div class="row g-2">
                   <div className="col">
@@ -282,21 +282,6 @@ const NavBar = () => {
 
                       <div className="d-flex column-gap-3 mb-3">
                         <select
-                          class="form-select   normalFirstAnimationRight"
-                          aria-label="Default select example"
-                        >
-                          <option selected>Town</option>
-                          <option value="1">ikotun</option>
-                          <option value="2">igando</option>
-                          <option value="3">iyana ipaja</option>
-                          <option value="3">idimu</option>
-                          <option value="3">isheri</option>
-                        </select>
-
-                        <input type="number" placeholder="Price Range" className="rounded amountInput normalFirstAnimationLeft" value={searchAmount} onChange={handleAmountChange} />
-                      </div>
-                      <div className="d-flex column-gap-3">
-                        <select
                           class="form-select normalFirstAnimationLeft"
                           aria-label="Default select example"
                         >
@@ -307,6 +292,23 @@ const NavBar = () => {
                           <option value="3">Apapa</option>
                           <option value="3">Ajeromi-Ifelodun</option>
                         </select>
+                        
+                        <select
+                          class="form-select   normalFirstAnimationRight"
+                          aria-label="Default select example"
+                        >
+                          <option selected>Town</option>
+                          <option value="1">ikotun</option>
+                          <option value="2">igando</option>
+                          <option value="3">iyana ipaja</option>
+                          <option value="3">idimu</option>
+                          <option value="3">isheri</option>
+                        </select>                       
+                      </div>
+                      <div className="d-flex column-gap-3">
+                        
+
+                        <input type="number" placeholder="Price Range" className="rounded amountInput normalFirstAnimationLeft form-control w-100" value={searchAmount} onChange={handleAmountChange} />
                       </div>
                       <button type="button" className="rounded btn btn-primary w-50 mx-auto mt-3">Search</button>
                     </form>
