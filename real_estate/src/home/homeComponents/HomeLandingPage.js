@@ -3,7 +3,7 @@ import imageConstruct from '../../all images/imageConstruct.jpg'
 import architecture from '../../all images/architecture_adesign_2020_2.webp'
 import leaDesignStudio from '../../all images/lea-design-studio-gold-coast-blog-reading-architectural-drawings-101-part-a-header-1080x675.jpg'
 import '../Home.css'
-// import { Link } from "react-router-dom";
+
 
 const HomeLandingPage = () => {
 

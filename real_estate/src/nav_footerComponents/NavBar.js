@@ -3,8 +3,13 @@ import { useState } from "react";
 import { NavLink } from "react-router-dom";
 import "./Navigation.css";
 const NavBar = () => {
-  const [searchAmount, setSearchAmount] = useState(null);
-  const handleAmountChange = (e) => setSearchAmount(e.target.value)
+  const [searchWorkSpaceAmount, setSearchWorkAmount] = useState(null);
+  const [searchStoreAmount, setSearchStoreAmount] = useState(null);
+  const [searchHallAmount, setSearchHallAmount] = useState(null);
+  const handleWorkSpaceAmountChange = (e) => setSearchWorkAmount(e.target.value);
+  const handleStoreAmountChange = (e) => setSearchStoreAmount(e.target.value);
+  const handleHallAmountChange = (e) => setSearchHallAmount(e.target.value);
+
   return (
     <>
       <nav class="navbar navbar-expand-lg bg-body-transparent fixed-top px-md-5">
@@ -91,8 +96,17 @@ const NavBar = () => {
                         </NavLink>
                       </li>
                       <li>
-                        <NavLink className="dropdown-item bg-transparent">
+                        <NavLink className="dropdown-item bg-transparent border-bottom border-white" data-bs-toggle="modal"
+                          data-bs-target="#storeRentageModal"
+                          role="button">
                           store
+                        </NavLink>
+                      </li>
+                      <li>
+                        <NavLink className="dropdown-item bg-transparent" data-bs-toggle="modal"
+                          data-bs-target="#HallRentageModal"
+                          role="button">
+                          Hall
                         </NavLink>
                       </li>
                     </ul>
@@ -308,7 +322,170 @@ const NavBar = () => {
                       <div className="d-flex column-gap-3">
                         
 
-                        <input type="number" placeholder="Price Range" className="rounded amountInput normalFirstAnimationLeft form-control w-100" value={searchAmount} onChange={handleAmountChange} />
+                        <input type="number" placeholder="Price Range" className="rounded amountInput normalFirstAnimationLeft form-control w-100" value={searchWorkSpaceAmount} onChange={handleWorkSpaceAmountChange} />
+                      </div>
+                      <button type="button" className="rounded btn btn-primary w-50 mx-auto mt-3">Search</button>
+                    </form>
+                  </div>
+                </div>
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+
+      {/* Rentage for Store */}
+
+      <div
+        className="modal fade"
+        id="storeRentageModal"
+        tabindex="3"
+        aria-labelledby="exampleModalLabel"
+        aria-hidden="true"
+      >
+        <div className="modal-dialog modal-dialog-centered">
+          <div className="modal-content modalBackGround">
+            <form action="" className="p-md-5 px-3 py-4">
+              <div className="container-fluid">
+                <div class="row g-2">
+                  <div className="col">
+                    <form action="" className="row">
+                      <div className="d-flex column-gap-3 mb-3">
+                        <select
+                          class="form-select w-75 normalFirstAnimationLeft"
+                          aria-label="Default select example"
+                        >
+                          <option selected>Country</option>
+                          <option value="1">Nigeria</option>
+                          <option value="2">Ghana</option>
+                          <option value="3">South-Africa</option>
+                          <option value="3">UK</option>
+                          <option value="3">Spain</option>
+                        </select>
+
+                        <select
+                          class="form-select w-75 normalFirstAnimationRight"
+                          aria-label="Default select example"
+                        >
+                          <option selected>State</option>
+                          <option value="1">Lagos</option>
+                          <option value="2">Ibadan</option>
+                          <option value="3">kogi</option>
+                          <option value="3">sokoto</option>
+                          <option value="3">ogun</option>
+                        </select>
+                      </div>
+
+                      <div className="d-flex column-gap-3 mb-3">
+                        <select
+                          class="form-select w-75 normalFirstAnimationLeft"
+                          aria-label="Default select example"
+                        >
+                          <option selected>local Gov.</option>
+                          <option value="1">Alimosho</option>
+                          <option value="2">Agege</option>
+                          <option value="3">Amuwo-Idofin</option>
+                          <option value="3">Apapa</option>
+                          <option value="3">Ajeromi-Ifelodun</option>
+                        </select>
+
+                        <select
+                          class="form-select w-75  normalFirstAnimationRight"
+                          aria-label="Default select example"
+                        >
+                          <option selected>Town</option>
+                          <option value="1">ikotun</option>
+                          <option value="2">igando</option>
+                          <option value="3">iyana ipaja</option>
+                          <option value="3">idimu</option>
+                          <option value="3">isheri</option>
+                        </select>
+
+                        
+                      </div>
+                      <div className="d-flex column-gap-3">
+                        <input type="number" placeholder="Price Range" className="rounded amountInput normalFirstAnimationLeft form-control w-100" value={searchStoreAmount} onChange={handleStoreAmountChange} />
+                      </div>
+                      <button type="button" className="rounded btn btn-primary w-50 mx-auto mt-3">Search</button>
+                    </form>
+                  </div>
+                </div>
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+      {/* Rentage for Store */}
+
+      <div
+        className="modal fade"
+        id="HallRentageModal"
+        tabindex="3"
+        aria-labelledby="exampleModalLabel"
+        aria-hidden="true"
+      >
+        <div className="modal-dialog modal-dialog-centered">
+          <div className="modal-content modalBackGround">
+            <form action="" className="p-md-5 px-3 py-4">
+              <div className="container-fluid">
+                <div class="row g-2">
+                  <div className="col">
+                    <form action="" className="row">
+                      <div className="d-flex column-gap-3 mb-3">
+                        <select
+                          class="form-select w-75 normalFirstAnimationLeft"
+                          aria-label="Default select example"
+                        >
+                          <option selected>Country</option>
+                          <option value="1">Nigeria</option>
+                          <option value="2">Ghana</option>
+                          <option value="3">South-Africa</option>
+                          <option value="3">UK</option>
+                          <option value="3">Spain</option>
+                        </select>
+
+                        <select
+                          class="form-select w-75 normalFirstAnimationRight"
+                          aria-label="Default select example"
+                        >
+                          <option selected>State</option>
+                          <option value="1">Lagos</option>
+                          <option value="2">Ibadan</option>
+                          <option value="3">kogi</option>
+                          <option value="3">sokoto</option>
+                          <option value="3">ogun</option>
+                        </select>
+                      </div>
+
+                      <div className="d-flex column-gap-3 mb-3">
+                        <select
+                          class="form-select w-75 normalFirstAnimationLeft"
+                          aria-label="Default select example"
+                        >
+                          <option selected>local Gov.</option>
+                          <option value="1">Alimosho</option>
+                          <option value="2">Agege</option>
+                          <option value="3">Amuwo-Idofin</option>
+                          <option value="3">Apapa</option>
+                          <option value="3">Ajeromi-Ifelodun</option>
+                        </select>
+
+                        <select
+                          class="form-select w-75  normalFirstAnimationRight"
+                          aria-label="Default select example"
+                        >
+                          <option selected>Town</option>
+                          <option value="1">ikotun</option>
+                          <option value="2">igando</option>
+                          <option value="3">iyana ipaja</option>
+                          <option value="3">idimu</option>
+                          <option value="3">isheri</option>
+                        </select>
+
+                        
+                      </div>
+                      <div className="d-flex column-gap-3">
+                        <input type="number" placeholder="Price Range" className="rounded amountInput normalFirstAnimationLeft form-control w-100" value={searchHallAmount} onChange={handleHallAmountChange} />
                       </div>
                       <button type="button" className="rounded btn btn-primary w-50 mx-auto mt-3">Search</button>
                     </form>
