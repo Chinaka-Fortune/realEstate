@@ -23,7 +23,7 @@
     width: 11.3rem;
 }
 
-@media (max-width:320px) {
+@media (max-width:480px) {
     .NavHamburger{
     font-size:.9rem;
     font-weight: 900;

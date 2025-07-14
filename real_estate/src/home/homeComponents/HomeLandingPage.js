@@ -12,21 +12,21 @@ const HomeLandingPage = () => {
     <div id="carouselExampleSlidesOnly" className="carousel slide carousel-fade" data-bs-ride="carousel" data-bs-pause ="false">
   <div className="carousel-inner">
      <div className="carousel-item caroselImage">
-    <img src={imageConstruct} className="d-block w-100" alt="..."/>
+    <img src={imageConstruct} className="" alt="..."/>
       <div className="carousel-caption carouselCaption">
         <h1 className='h1Font where-h1-text'>Where Dreams Meet Keys.</h1>
         <p className='fw-bolder fs-3 where-h1-text'>Luxury Homes Where Dreams Meet Keys, Unlock Your Perfect Haven.</p>
       </div>
     </div>
     <div className="carousel-item active caroselImage">
-      <img src={architecture} className="d-block w-100" alt="..."/>
+      <img src={architecture} className="" alt="..."/>
       <div className="carousel-caption carouselCaption">
         <h1 className='h1Font yourHomeExpertiesText'>Your Home Journey, Our Expertise.</h1>
         <p className='fw-bolder fs-3 yourHomeExpertiesText'>Your Home Journey, Our Expertise: Guiding You Home with Care and Precision</p>
       </div>
     </div>
     <div className="carousel-item caroselImage">
-      <img src={leaDesignStudio} className="d-block w-100" alt="..."/>
+      <img src={leaDesignStudio} className="" alt="..."/>
       <div className="carousel-caption carouselCaption">
         <h1 className='h1Font FindAperfectText'>Find a Perfect Dream House</h1>
         <p className='FindAperfectText fw-bolder fs-3'>Some representative placeholder content for the first slide.</p>
