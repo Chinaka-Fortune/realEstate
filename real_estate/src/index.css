@@ -43,8 +43,6 @@
 }
 
 @keyframes first {
-  /* from{opacity: 0; transform: translateX(-100px);}
-  from{opacity: 1; transform: translateX(0px);} */
   from{
     opacity: 0;
     scale: 0.5;
