@@ -4,6 +4,7 @@ import OurPopularHomes from './homeComponents/OurPopularHomes';
 import ReachOut from './homeComponents/ReachOut';
 import Testimonies from './homeComponents/Testimonies';
 import Agent from './homeComponents/Agent';
+import NewsLetter from './homeComponents/NewsLetter';
 
 const Home = () => {
   return (
@@ -13,6 +14,7 @@ const Home = () => {
       <ReachOut />
       <Testimonies />
       <Agent />
+      <NewsLetter />
     </div>
   )
 }

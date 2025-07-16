@@ -1,6 +1,6 @@
 import React from "react";
 import { useRef, useState } from "react";
-
+import { NavLink } from "react-router-dom";
 import BedRoomDetach from "../homeImages/5 bedroom detached duplex for sale lekki lagos.jpg";
 import whiteMassion from "../homeImages/whitemassion.jpg";
 import bedRoomBQ from "../homeImages/Lovely 5bedroom duplex with 2 rooms BQ,.jpg";
@@ -38,57 +38,57 @@ const OurPopularHomes = () => {
         <div className="box position-relative" ref={RotatingBoxRef}>
           <div style={{ "--i": 1 }}>
             <img src={bedRoomBeast} alt=""/>
-            <span
-              className=" position-absolute rounded-pill px-2 ourComponentImgDivBtn"
+            <NavLink to = "/popularDetails"
+              className=" position-absolute rounded-pill px-2 ourComponentImgDivBtn text-decoration-none"
               role="button"
             >
               details
-            </span>
+            </NavLink>
           </div>
           <div style={{ "--i": 2 }}>
             <img src={modernHouse} alt="" />
-            <span
-              className=" position-absolute rounded-pill px-2 ourComponentImgDivBtn"
+            <NavLink to = "/popularDetails"
+              className=" position-absolute rounded-pill px-2 ourComponentImgDivBtn text-decoration-none"
               role="button"
             >
               details
-            </span>
+            </NavLink>
           </div>
           <div style={{ "--i": 3 }}>
             <img src={luxuryHome} alt="" />
-            <span
-              className=" position-absolute rounded-pill px-2 ourComponentImgDivBtn"
+            <NavLink to = "/popularDetails"
+              className=" position-absolute rounded-pill px-2 ourComponentImgDivBtn text-decoration-none"
               role="button"
             >
               details
-            </span>
+            </NavLink>
           </div>
           <div style={{ "--i": 4 }}>
             <img src={bedRoomBQ} alt="" />
-            <span
-              className=" position-absolute rounded-pill px-2 ourComponentImgDivBtn"
+            <NavLink to = "/popularDetails"
+              className=" position-absolute rounded-pill px-2 ourComponentImgDivBtn text-decoration-none"
               role="button"
             >
               details
-            </span>
+            </NavLink>
           </div>
           <div style={{ "--i": 5 }}>
             <img src={whiteMassion} alt="" />
-            <span
-              className=" position-absolute rounded-pill px-2 ourComponentImgDivBtn"
+            <NavLink to = "/popularDetails"
+              className=" position-absolute rounded-pill px-2 ourComponentImgDivBtn text-decoration-none"
               role="button"
             >
               details
-            </span>
+            </NavLink>
           </div>
           <div style={{ "--i": 6 }}>
             <img src={BedRoomDetach} alt="" />
-            <span
-              className=" position-absolute rounded-pill px-2 ourComponentImgDivBtn"
+            <NavLink to = "/popularDetails"
+              className=" position-absolute rounded-pill px-2 ourComponentImgDivBtn text-decoration-none"
               role="button"
             >
               details
-            </span>
+            </NavLink>
           </div>
         </div>
         <div className="popularBtnDiv d-flex gap-5">

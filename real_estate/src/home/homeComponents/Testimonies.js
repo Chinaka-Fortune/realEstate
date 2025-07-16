@@ -10,7 +10,7 @@ import TestimoniesComp from './TestimoniesComp'
 const Testimonies = () => {
   return (
      <div className="container my-5 px-5">
-      <h2 className='text-center fs-2 fw-bolder'>Testimonies</h2>
+      <h2 className='text-center fs-2 fw-bolder'>TESTIMONIALS</h2>
       <div className="row mt-4 row-gap-4 d-flex justify-content-center">
         <div className="col-md-5 col-lg-4 col-12">
           <TestimoniesComp testimonyPix = {dowload1} testimonyText="loren ipsum text jhhnwkl ;djuiw hdekjeo euydwh; kjhde wieuhw; kejhwu jheuehe" testimonyJob ="frontend" testimonyName ="Benedict"/>

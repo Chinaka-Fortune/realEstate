@@ -1,8 +1,9 @@
-*{
+* {
    margin: 0;
    padding: 0;
    box-sizing: border-box;
 }
+
 .caroselImage {
    width: 100%;
    height: 100vh;
@@ -30,22 +31,24 @@
    text-shadow: 8px 8px 12px #000, 9px 9px 9px blue;
 }
 
-.ourComponentContainer{
-transform-style: preserve-3d;
-height: 50vh;
-}
-.ourComponentContainermain{
-height: 100vh;
+.ourComponentContainer {
+   transform-style: preserve-3d;
+   height: 50vh;
 }
 
-.ourComponentContainer .box{
+.ourComponentContainermain {
+   height: 100vh;
+}
+
+.ourComponentContainer .box {
    width: 150px;
    height: 200px;
    transform-style: preserve-3d;
-   transition: 1.5s ;
+   transition: 1.5s;
    transform: perspective(1000px) rotateY(0deg);
 }
-.ourComponentContainer .box div{
+
+.ourComponentContainer .box div {
    position: absolute;
    top: 0;
    left: 0;
@@ -57,7 +60,7 @@ height: 100vh;
    -webkit-box-reflect: below 1px linear-gradient(transparent, transparent, #0004);
 }
 
-.ourComponentContainer .box div img{
+.ourComponentContainer .box div img {
    position: absolute;
    top: 0;
    left: 0;
@@ -67,7 +70,7 @@ height: 100vh;
    border-radius: 15px;
 }
 
-.popularBtnDiv{
+.popularBtnDiv {
    position: absolute;
    bottom: -100px;
 }
@@ -77,28 +80,21 @@ height: 100vh;
    left: 7%;
    top: 10rem;
    background-color: rgba(225, 225, 225, 0.5);
-} 
+}
 
- .ourComponentImgDivBtn:hover {
+.ourComponentImgDivBtn:hover {
    background-color: rgb(0, 0, 255, .5);
    color: #fff;
 
-} 
+}
 
-.ourComponentContainerDivColor{
+.ourComponentContainerDivColor {
    background-color: rgb(0, 0, 0);
    width: 100%;
    height: 100vh;
-} 
-
-.reachOutHover:hover{
-   background-image: linear-gradient(to right, cyan,hotPink);
-   transition: .5s linear;
 }
 
-
-
-.container_box .card-details img{
+.container_box .card-details img {
    width: 50px;
    height: 50px;
    object-fit: cover;
@@ -106,22 +102,46 @@ height: 100vh;
    margin-right: 10px;
 }
 
-.container_box, .agent_box{
-box-shadow: 5px 5px 10px rgba(225,225,225,0.8),-5px -5px 10px rgba(225,225,225,0.2);
-color: rgba(0, 0, 0,.8);
+.container_box {
+   color: rgba(0, 0, 0, .8);
+   box-shadow: 5px 5px 10px #babecc,
+   -5px -5px 10px #fff;
+}
+
+.agent_box,
+.NewsLetterContainer,
+.NewsLetterInput {
+   box-shadow: 5px 5px 10px #babecc,
+   -5px -5px 10px #fff;
 
 }
 
-.agent_box h6{
-   /* display: none; */
-   background-color: rgba(0, 0, 0,.3);
+.agentBtn,
+.reachOutHover,
+.agent_box h6,
+.NewsLetterInputBtn {
+   box-shadow: 5px 5px 10px #babecc inset,
+   -5px -5px 10px #fff inset;
 }
-.agent_box h6{
+
+.agentBtn:hover,
+.reachOutHover:hover,
+.NewsLetterInputBtn:hover {
+   box-shadow: 5px 5px 10px #8ea2ec inset,
+   -5px -5px 10px #747070 inset;
+}
+
+.NewsLetterContainer input {
+   outline: none;
+}
+
+.agent_box h6 {
    position: absolute;
    bottom: 10%;
    display: block;
 }
-.agent_box img{
+
+.agent_box img {
    width: 100%;
    height: 100%;
    aspect-ratio: 1;
@@ -129,38 +149,48 @@ color: rgba(0, 0, 0,.8);
    object-position: center 10px;
 }
 
+.newLetterImgDiv {
+   height: 20%;
+}
+
+.newLetterImgDiv img {
+   width: 100%;
+   height: 100%;
+   aspect-ratio: 2;
+}
+
 @media (max-width:480px) {
-   .ourComponentContainer .box div{
-   transform: rotateY(calc(var(--i)* 60deg)) translateZ(140px) 
+   .ourComponentContainer .box div {
+      transform: rotateY(calc(var(--i)* 60deg)) translateZ(140px)
+   }
+
+   .ourComponentContainermain {
+      height: 100vh;
+   }
+
+   .popularBtnDiv {
+      position: absolute;
+      bottom: -27%;
+   }
+
 }
 
-.ourComponentContainermain{
-height: 100vh;
-}
-
-.popularBtnDiv{
-   position: absolute;
-   bottom: -27%;
-}
-
-}
-
-@media (max-width:767px) {
-   
-}
+@media (max-width:767px) {}
 
 @media (min-width:768px) {
-
+   .newLetterImgDiv {
+      height: 20rem;
+   }
 }
 
 @media (min-width:1200px) {
-   .agent_box h6{
-   display: none;
-}
+   .agent_box h6 {
+      display: none;
+   }
 
-.agent_box:hover h6{
-   position: absolute;
-   bottom: 10%;
-   display: block;
-}
+   .agent_box:hover h6 {
+      position: absolute;
+      bottom: 10%;
+      display: block;
+   }
 }
