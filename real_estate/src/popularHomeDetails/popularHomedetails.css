@@ -1,9 +1,148 @@
 .videoDiv{
-    height:100vh;
-    width: 100vw;
+    height:20vh;
+    width: 50%;
 }
-/* .videoDiv video{
+
+.slider{
+    height: 100vh;
+}
+
+.slider .list .item{
+    position: absolute;
+    inset: 0 0 0 0;
+    overflow: hidden;
+    opacity: 0;
+    transition: .5s;
+}
+.slider .list .item img{
+   width: 100%;
+   height: 100%;
+   /* object-fit: cover; */
+}
+
+.slider .list .item::after{
+    content: '';
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    background-image: linear-gradient(to top, #000 40%, transparent);
+}
+
+.slider .list .item .content{
+    position: absolute;
+    left: 10%;
+    top: 20%;
+    width: 500px;
+    color: white;
+    max-width: 80%;
+    z-index: 1;
+}
+
+.slider .list .item p:nth-child(1){
+    text-transform: uppercase;
+    letter-spacing: 10px;
+}
+
+.slider .list .item h2{
+    font-style: 100%;
+}
+
+.slider .list .item.active{
+    opacity: 1;
+    z-index: 10;
+}
+
+@keyframes showContent {
+    to{
+        transform: translateY(0);
+        filter: blur(0);
+        opacity: 1;
+    }
+}
+
+.slider .list .item.active p:nth-child(1),.slider .list .item.active h2, .slider .list .item.active p:nth-child(3){
+transform: translateY(30px);
+filter: blur(20px);
+opacity: 0;
+animation: showContent .5s .7s ease-in-out 1 forwards;
+}
+
+.slider .list .item.active h2{
+    animation-delay: 1s;
+}
+
+.slider .list .item.active p:nth-child(3){
+    animation-delay: 1.3s;
+}
+
+.arrowBtn{
+    position: absolute;
+    top: 30%;
+    right: 50px;
+    z-index: 100;
+}
+
+.arrowBtn button{
+    transition: .5s;
+}
+.arrowBtn button:hover{
+    background-color: rgba(0, 0, 255,.2);
+}
+
+.thumbnailImages{
+    position: absolute;
+    bottom: 50px;
+    z-index: 11;
+    display: flex;
+    gap: 10px;
+    width: 100%;
+    height: 250px;
+    padding: 0 50px;
+    box-sizing: border-box;
+    overflow: auto;
+    justify-content: end;
+}
+
+.thumbnailImages::-webkit-scrollbar{
+    width: 0;
+}
+
+.thumbnailImages .item{
+    width: 150px;
+    height: 220px;
+    filter: brightness(.5);
+    transition: .5s;
+    flex-shrink: 0;
+}
+
+.thumbnailImages .item img{
     height: 100%;
     width: 100%;
-    
-} */
+    object-fit: cover;
+    border-radius: 5px;
+}
+
+.thumbnailImages .item.active{
+    filter: brightness(1.5);
+}
+
+.thumbnailImages .item .content{
+    position: absolute;
+    inset: auto 10px 10px 10px;
+}
+
+@media (max-width:678px) {
+    .thumbnailImages{
+        justify-content: start;
+    }
+
+    .slider .list .item .content h2{
+        font-size: 60px;
+    }
+
+    .arrowBtn{
+        top: 10%;
+    }
+}
