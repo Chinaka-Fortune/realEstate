@@ -27,7 +27,7 @@
     position: absolute;
     left: 0;
     bottom: 0;
-    background-image: linear-gradient(to top, #000 40%, transparent);
+    /* background-image: linear-gradient(to top, #000 40%, transparent); */
 }
 
 .slider .list .item .content{
@@ -38,6 +38,8 @@
     color: white;
     max-width: 80%;
     z-index: 1;
+    background-color: rgb(0, 0, 0,0.2);
+    backdrop-filter:blur(2px);
 }
 
 .slider .list .item p:nth-child(1){
@@ -93,7 +95,7 @@ animation: showContent .5s .7s ease-in-out 1 forwards;
 
 .thumbnailImages{
     position: absolute;
-    bottom: 50px;
+    bottom: 1rem;
     z-index: 11;
     display: flex;
     gap: 10px;
@@ -110,11 +112,12 @@ animation: showContent .5s .7s ease-in-out 1 forwards;
 }
 
 .thumbnailImages .item{
-    width: 150px;
-    height: 220px;
+    width:120px;
+    height: 100px;
     filter: brightness(.5);
     transition: .5s;
     flex-shrink: 0;
+    margin-top: 7rem;
 }
 
 .thumbnailImages .item img{
@@ -133,6 +136,23 @@ animation: showContent .5s .7s ease-in-out 1 forwards;
     inset: auto 10px 10px 10px;
 }
 
+.contentBtnPopular{
+    background-color:transparent;
+    box-shadow:5px 5px 10px #090a0a,
+   -5px -5px 10px #161616; ;
+}
+.contentBtnPopular:hover{
+    background-color: rgb(43, 40, 40);
+}
+
+/* .navLinkIconPopular{
+    color: white;
+}
+
+.navLinkIconPopular:hover{
+color: rgba(0, 0, 255, 0.356);
+
+} */
 @media (max-width:678px) {
     .thumbnailImages{
         justify-content: start;
