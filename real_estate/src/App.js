@@ -3,6 +3,8 @@ import { BrowserRouter, Routes,Route } from 'react-router-dom';
 import NavBar from './nav_footerComponents/NavBar';
 import Home from './home/Home';
 import PopularDetails from './popularHomeDetails/PopularDetails';
+import NewProperties from './newProperties/NewProperties';
+
 
 
 function App() {
@@ -12,6 +14,7 @@ function App() {
     <Routes>
       <Route path='/' Component={Home} />
       <Route path='/popularDetails' Component={PopularDetails} />
+      <Route path='/newProperties' Component={NewProperties} />
       
     </Routes>
     </BrowserRouter>

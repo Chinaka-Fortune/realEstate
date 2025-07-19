@@ -1,29 +1,33 @@
 import React from "react";
 
 import { useRef, useState, useEffect } from "react";
-import { NavLink } from "react-router-dom";
+// import { NavLink } from "react-router-dom";
 
 import shaggi from "../popularHomeDetails/popularVideo/shaggi.mp4";
 import whiteMassion from "../../src/home/homeImages/whitemassion.jpg";
 import bedRoomBQ from "../../src/home/homeImages/Lovely 5bedroom duplex with 2 rooms BQ,.jpg";
 import luxuryHome from "../../src/home/homeImages/Luxury Home.jpg";
 import modernHouse from "../../src/home/homeImages/modern house.jpg";
-import bedRoomBeast from "../../src/home/homeImages/The _Beast_ 5-Bedroom Detached Duplex_.jpg";
 
 import "../popularHomeDetails/popularHomedetails.css";
 
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faEnvelope, faBed, faBath } from "@fortawesome/free-solid-svg-icons";
+import { faBed, faBath } from "@fortawesome/free-solid-svg-icons";
 
 const PopularDetails = () => {
   const [currentIndex, setCurrentIndex] = useState(0);
+  const [controlPlay, setControlPlay] = useState(
+    <i class="bi bi-play fw-bolder fs-4"></i>
+  );
   const sliderItems = useRef([]);
   const thumbnailItems = useRef([]);
 
   useEffect(() => {
-    sliderItems.current = Array.from(document.querySelectorAll(".list .item"));
+    sliderItems.current = Array.from(
+      document.querySelectorAll(".list .itemCoral")
+    );
     thumbnailItems.current = Array.from(
-      document.querySelectorAll(".thumbnailImages .item")
+      document.querySelectorAll(".thumbnailImages .itemCoral")
     );
     updateActiveClass();
   }, [currentIndex]);
@@ -51,10 +55,24 @@ const PopularDetails = () => {
     );
   };
 
+  const videoRef = useRef(null);
+
+  const handlePlayVideo = () => {
+    if (videoRef.current) {
+      if (videoRef.current.paused) {
+        videoRef.current.play();
+        setControlPlay(<i class="bi bi-pause-fill"></i>);
+      } else {
+        videoRef.current.pause();
+        setControlPlay(<i class="bi bi-play fw-bolder fs-4"></i>);
+      }
+    }
+  };
+
   return (
     <div className="slider position-relative">
       <div className="list">
-        <div className="item active " ref={sliderItems}>
+        <div className="item active itemCoral" ref={sliderItems}>
           <img src={whiteMassion} alt="" />
           <div className="content p-3 rounded lh-1">
             <p className="fw-bolder">White massion </p>
@@ -63,90 +81,55 @@ const PopularDetails = () => {
               <i class="bi bi-geo-alt-fill me-1"></i>
               45, kunle street, Governor Road, Ikotun, Lagos
             </p>
-            <div className="d-flex">
-              <p className="fs-5 fw-bold">
-                <FontAwesomeIcon icon={faBed} className="me-2 fs-5 fw-bold" />7
+            <div className="d-flex column-gap-3">
+              <p className="fs-6 fw-bold">
+                <FontAwesomeIcon icon={faBed} className="me-2 fs-6 fw-bold" />7
               </p>
-              <p className="fs-5 fw-bold">
-                <FontAwesomeIcon icon={faBath} className="me-2 fs-5 fw-bold" />7
+              <p className="fs-6 fw-bold">
+                <FontAwesomeIcon icon={faBath} className="me-2 fs-6 fw-bold" />7
               </p>
+              <p className="fs-6 fw-bold"><i class="bi bi-arrows-fullscreen me-2 fs-6 fw-bolder"></i>500sq</p>
             </div>
             <p className="fw-bolder">
               <i class="bi bi-person-vcard me-1"></i> Agent: Anointing
             </p>
-            <div className=" d-flex column-gap-3 mb">
-              <NavLink>
-                <i class="bi bi-whatsapp  navLinkIconPopular fw-bolder fs-5"></i>
-              </NavLink>
-              <NavLink>
-                <i class="bi bi-instagram  navLinkIconPopular fw-bolder fs-5"></i>
-              </NavLink>
-              <NavLink>
-                <i class="bi bi-facebook  navLinkIconPopular fw-bolder fs-5"></i>
-              </NavLink>
-              <NavLink>
-                <i class="bi bi-linkedin  navLinkIconPopular fw-bolder fs-5"></i>
-              </NavLink>
-              <NavLink>
-                <i class="bi bi-twitter-x  navLinkIconPopular fw-bolder fs-5"></i>
-              </NavLink>
-            </div>
-            
             <div>
               <button className="btn px-2 py-2 fw-bolder text-white contentBtnPopular fw-bolder rounded-pill">
                 click to message here <i class="bi bi-arrow-right-circle"></i>
               </button>
             </div>
-            {/* <video controls className="videoDiv">
+          </div>
+        </div>
+        <div className="item itemCoral" ref={sliderItems}>
+          <img src={luxuryHome} alt="" />
+          <div className="content">
+            <h2>Back View</h2>
+          </div>
+        </div>
+        <div className="item itemCoral" ref={sliderItems}>
+          <img src={modernHouse} alt="" />
+          <div className="content">
+            <h2>side</h2>
+          </div>
+        </div>
+        <div className="item itemCoral" ref={sliderItems}>
+          <img src={bedRoomBQ} alt="" />
+          <div className="content">
+            <h2>Side</h2>
+          </div>
+        </div>
+        <div className=" itemCoral" ref={sliderItems}>
+          <video className="videoDiv" ref={videoRef}>
             <source src={shaggi} type="video/mp4" />
             <source src={shaggi} type="video/ogg" />
             Your browser does not support HTML video.
-          </video> */}
-          </div>
-        </div>
-        <div className="item" ref={sliderItems}>
-          <img src={bedRoomBeast} alt="" />
-          <div className="content">
-            <p>design</p>
-            <h2>₦50,000,000</h2>
-            <p>
-              lorenm ipsum test dkjskjd keje jhsswfd e nmd mndfksl iire sjjajg
-              srjj jy eywuw k;dd.wsdkjs jrksh kjwjjew kekwl;se n{" "}
-            </p>
-          </div>
-        </div>
-        <div className="item" ref={sliderItems}>
-          <img src={modernHouse} alt="" />
-          <div className="content">
-            <p>design</p>
-            <h2>slider 3</h2>
-            <p>
-              lorenm ipsum test dkjskjd keje jhsswfd e nmd mndfksl iire sjjajg
-              srjj jy eywuw k;dd.wsdkjs jrksh kjwjjew kekwl;se n{" "}
-            </p>
-          </div>
-        </div>
-        <div className="item" ref={sliderItems}>
-          <img src={bedRoomBQ} alt="" />
-          <div className="content">
-            <p>design</p>
-            <h2>slider 4</h2>
-            <p>
-              lorenm ipsum test dkjskjd keje jhsswfd e nmd mndfksl iire sjjajg
-              srjj jy eywuw k;dd.wsdkjs jrksh kjwjjew kekwl;se n{" "}
-            </p>
-          </div>
-        </div>
-        <div className="item" ref={sliderItems}>
-          <img src={luxuryHome} alt="" />
-          <div className="content">
-            <p>design</p>
-            <h2>slider 5</h2>
-            <p>
-              lorenm ipsum test dkjskjd keje jhsswfd e nmd mndfksl iire sjjajg
-              srjj jy eywuw k;dd.wsdkjs jrksh kjwjjew kekwl;se n{" "}
-            </p>
-          </div>
+          </video>
+          <button
+            className="play-button fw-bolder rounded-pill "
+            onClick={handlePlayVideo}
+          >
+            {controlPlay}
+          </button>
         </div>
       </div>
 
@@ -168,26 +151,28 @@ const PopularDetails = () => {
       </div>
 
       <div className="thumbnailImages">
-        <div className="item active" ref={thumbnailItems}>
+        <div className="item active itemCoral" ref={thumbnailItems}>
           <img src={whiteMassion} alt="" />
           <div className="content fw-bolder fs-4 text-white">front</div>
         </div>
-        <div className="item" ref={thumbnailItems}>
-          <img src={bedRoomBeast} alt="" />
+        <div className="item itemCoral" ref={thumbnailItems}>
+          <img src={luxuryHome} alt="" />
           <div className="content fw-bolder fs-4 text-white">back</div>
         </div>
-        <div className="item" ref={thumbnailItems}>
+        <div className="item itemCoral" ref={thumbnailItems}>
           <img src={modernHouse} alt="" />
           <div className="content fw-bolder fs-4 text-white">side 1</div>
         </div>
-        <div className="item" ref={thumbnailItems}>
+        <div className="item itemCoral" ref={thumbnailItems}>
           {" "}
           <img src={bedRoomBQ} alt="" />
           <div className="content fw-bolder fs-4 text-white">side 2</div>
         </div>
-        <div className="item" ref={thumbnailItems}>
-          <img src={luxuryHome} alt="" />
-          <div className="content"></div>
+        <div className=" itemCoral" ref={thumbnailItems}>
+          <video className=" videoDiv1" width="100%" height="100%">
+            <source src={shaggi} type="video/mp4" />
+            Your browser does not support HTML video.
+          </video>
         </div>
       </div>
     </div>

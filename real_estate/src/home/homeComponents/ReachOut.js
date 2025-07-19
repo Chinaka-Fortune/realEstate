@@ -6,7 +6,7 @@ const ReachOut = () => {
   return (
     <div className="container my-4">
       <div className="row d-flex  justify-content-center gap-2 gap-md-4">
-        <NavLink className="col-md-2 col-5 py-4 py-md-5 text-center fw-bold rounded  d-flex flex-column  text-decoration-none reachOutHover">
+        <NavLink to ="/newProperties" className="col-md-2 col-5 py-4 py-md-5 text-center fw-bold rounded  d-flex flex-column  text-decoration-none reachOutHover">
           <i class="bi bi-buildings  fs-2 text-dark"></i>
           <span className="text-dark">New Properties</span>
         </NavLink>

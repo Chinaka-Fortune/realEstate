@@ -1,7 +1,12 @@
 import React from "react";
+import { useState } from "react";
 import darkBuilding from "../homeImages/darkBuilding.jpg";
 import "../Home.css";
 const NewsLetter = () => {
+  
+  const [newLetter, setNewsLetter] = useState('');
+  const handleNewsLetter = (e)=> setNewsLetter(e.target.value)
+
   return (
     <div className="container-fluid my-5 NewsLetterContainer">
       <div className="row d-flex align-items-center">
@@ -13,7 +18,7 @@ const NewsLetter = () => {
           <span className="fs-5 ">
             Get started by choosing to subscribe to get updated properties</span>
              <form action="" className="mt-3">
-              <input type="text" placeholder="Enter mail" className="w-100 rounded-pill py-2 ps-3 text-dark border-0 NewsLetterInput" />
+              <input type="text" placeholder="Enter mail" className="w-100 rounded-pill py-2 ps-3 text-dark border-0 NewsLetterInput" value={newLetter} onChange={handleNewsLetter}/>
               <input type="button" value="Submit" className="NewsLetterInputBtn px-4 py-2 rounded-pill border-0 mt-3 fw-bolder"/>
             </form>
         </div>
