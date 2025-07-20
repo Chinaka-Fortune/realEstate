@@ -8,7 +8,7 @@ const NewProperties = () => {
     <div className='container'>
       <div className="row">
         <div className="col-2">
-            <NewPropertiesComp propertyPix ={propertyDev}/>
+            <NewPropertiesComp propertyPix ={propertyDev} propertyText ="lorem5 gges ansj"/>
         </div>
       </div>
     </div>

@@ -1,11 +1,11 @@
 import React from 'react'
 
-const NewPropertiesComp = ({propertyPix}) => {
+const NewPropertiesComp = ({propertyPix, propertyText}) => {
   return (
     <div className='component-prop'>
       <img src={propertyPix} alt="" />
       <div className="content">
-        <p></p>
+        <p>{propertyText}</p>
         <p></p>
         <p></p>
         <p></p>
