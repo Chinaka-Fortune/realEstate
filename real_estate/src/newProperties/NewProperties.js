@@ -1,84 +1,282 @@
 import React from "react";
-import { useRef, useEffect } from "react";
+import { useState } from "react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faBed, faBath } from "@fortawesome/free-solid-svg-icons";
 import propertyDev from "./newPropImages/Property-Development-Fateck-4.jpg";
+import redHouse from "./newPropImages/redHouse.jpg";
 import "./newProperties.css";
 import "../index.css";
 const NewProperties = () => {
+  const [favouriteColour, setFavouriteColour] = useState(
+    <i class="bi bi-heart text-white pointerCursorStyle"></i>
+  );
 
-  const detailsRef = useRef([]);
-    const detailsImage = useRef([]);
-    const updateActiveClass = useRef();
-  
-    useEffect(() => {
-      detailsRef.current = Array.from(
-        document.querySelectorAll("propertyinformation")
+  const handleIcon = () => {
+    if (favouriteColour) {
+      setFavouriteColour(
+        <i class="bi bi-heart-fill pointerCursorStyle text-danger"></i>
       );
-      detailsImage.current = Array.from(
-        document.querySelectorAll(".imageDivNewProperty .propertyDevImg")
-      );
-      // updateActiveClass();
-    }, []);
-  
-    
+    } else if (favouriteColour === false) {
+      setFavouriteColour(favouriteColour);
+    }
+  };
+
   return (
     <>
       <img src={propertyDev} alt="" className="propertyBanner" />
-     
-      {/* <img src={propertyDev} alt="" className="propertyBanner" />
 
       <div className="container-fluid mt-5">
         <div className="row">
-          <div className="col-4 position-relative nnn ">
-            <div className=" bg-success w-25 position-absolute top-0 left-3 py-2 rounded-pill text-center fw-bolder text-white">
-              For Sell
-            </div>
-            <div className="try ">
-              <img src={propertyDev} alt="" />
-            </div>
-            
-            <div className="propertyinformation ">
-              <h5 className=" text-white">4 Bedroom duplex</h5>
-              <div className="d-flex column-gap-3">
-                <p className="fs-6 fw-bold text-white">
-                  <FontAwesomeIcon icon={faBed} className="me-2 fs-6 fw-bold" />
-                  7
-                </p>
-                <p className="fs-6 fw-bold text-white">
-                  <FontAwesomeIcon
-                    icon={faBath}
-                    className="me-2 fs-6 fw-bold"
-                  />
-                  7
-                </p>
-                <p className="fs-6 fw-bold text-white">
-                  <i class="bi bi-arrows-fullscreen me-2 fs-6 fw-bolder"></i>
-                  500sq
-                </p>
+          <div className="  d-flex justify-content-center align-items-center ">
+            <div className="col-3 b">
+            <div className="newPropertyImageDdivCard">
+              <div className="newPropertyImageDdiv">
+                <img src={redHouse} alt="" />
               </div>
-              <div className="d-flex align-items-center column-gap-2">
-                <div className="newPropertyAgentDiv">
-                  <img src={propertyDev} alt="" />
+              <div className="content">
+                <div className="price">
+                  <p className="fw-bolder rounded-2 priceAmount">
+                    ₦7,567,854,000
+                  </p>
+                  <p className="saleDetails text-white px-3 fw-bolder ms-3 mt-1 rounded-pill bg-succes">
+                    For Sale
+                  </p>
                 </div>
-                <h5 className="text-white">ziff Properties</h5>
-              </div>
-              <div className="d-flex column-gap-2 my-2">
-                <button className="rounded-pill px-3 py-1 border-2  bg-transparent text-white fw-bold">
-                  Call
-                  <i class="bi bi-telephone-outbound-fill text-success ms-2"></i>
-                </button>
-                <button className="px-4 py-1 rounded-pill border-2 bg-transparent">
-                  <i class="bi bi-whatsapp text-success fw-bolder"></i>
-                </button>
-              </div>
-              <div>
-                <button className="px-3 py-2 rounded-pill bg-transparent text-white">View more Details <i class="bi bi-arrow-right-circle"></i></button>
+                <div className="propertyinformation lh-1">
+                  <h4 className=" text-white">4 Bedroom duplex</h4>
+                  <div className="d-flex column-gap-3 lh-1">
+                    <p className=" fw-bold text-white">
+                      <FontAwesomeIcon icon={faBed} className="me-2 fw-bold" />7
+                    </p>
+                    <p className=" fw-bold text-white">
+                      <FontAwesomeIcon
+                        icon={faBath}
+                        className="me-2  fw-bold"
+                      />
+                      7
+                    </p>
+                    <p className=" fw-bold text-white">
+                      <i class="bi bi-arrows-fullscreen me-2  fw-bolder"></i>
+                      500sqm
+                    </p>
+                    <button className="rounded-pill px-3 border-2  bg-transparent text-white d-flex align-items-center">
+                      <i class="bi bi-telephone-outbound-fill text-success"></i>
+                    </button>
+                  </div>
+                  <div className="d-flex align-items-center column-gap-2">
+                    <div className="newPropertyAgentDiv">
+                      <img src={propertyDev} alt="" />
+                    </div>
+                    <h6 className="text-white">ziff Properties</h6>
+                    <button className="px-4 py-1  rounded-pill border-2 bg-transparent">
+                      <i class="bi bi-whatsapp text-success fw-bolder"></i>
+                    </button>
+                  </div>
+                  <div className="mt-2 d-flex column-gap-3 align-items-center">
+                    <button className="px-3 rounded-pill bg-transparent text-white py-1 fw-bold">
+                      <em>View more Details</em>{" "}
+                      <i class="bi bi-arrow-right-circle"></i>
+                    </button>
+                    <div onClick={handleIcon}>{favouriteColour}</div>
+                    <input
+                      type="checkbox"
+                      name=""
+                      id=""
+                      className="pointerCursorStyle"
+                    />
+                  </div>
+                </div>
               </div>
             </div>
           </div>
+
+
+          <div className="col-3 b">
+            <div className="newPropertyImageDdivCard">
+              <div className="newPropertyImageDdiv">
+                <img src={redHouse} alt="" />
+              </div>
+              <div className="content">
+                <div className="price">
+                  <p className="fw-bolder rounded-2 priceAmount">
+                    ₦7,567,854,000
+                  </p>
+                  <p className="saleDetails text-white px-3 fw-bolder ms-3 mt-1 rounded-pill bg-succes">
+                    For Sale
+                  </p>
+                </div>
+                <div className="propertyinformation lh-1">
+                  <h4 className=" text-white">4 Bedroom duplex</h4>
+                  <div className="d-flex column-gap-3 lh-1">
+                    <p className=" fw-bold text-white">
+                      <FontAwesomeIcon icon={faBed} className="me-2 fw-bold" />7
+                    </p>
+                    <p className=" fw-bold text-white">
+                      <FontAwesomeIcon
+                        icon={faBath}
+                        className="me-2  fw-bold"
+                      />
+                      7
+                    </p>
+                    <p className=" fw-bold text-white">
+                      <i class="bi bi-arrows-fullscreen me-2  fw-bolder"></i>
+                      500sqm
+                    </p>
+                    <button className="rounded-pill px-3 border-2  bg-transparent text-white d-flex align-items-center">
+                      <i class="bi bi-telephone-outbound-fill text-success"></i>
+                    </button>
+                  </div>
+                  <div className="d-flex align-items-center column-gap-2">
+                    <div className="newPropertyAgentDiv">
+                      <img src={propertyDev} alt="" />
+                    </div>
+                    <h6 className="text-white">ziff Properties</h6>
+                    <button className="px-4 py-1  rounded-pill border-2 bg-transparent">
+                      <i class="bi bi-whatsapp text-success fw-bolder"></i>
+                    </button>
+                  </div>
+                  <div className="mt-2 d-flex column-gap-3 align-items-center">
+                    <button className="px-3 rounded-pill bg-transparent text-white py-1 fw-bold">
+                      <em>View more Details</em>{" "}
+                      <i class="bi bi-arrow-right-circle"></i>
+                    </button>
+                    <div onClick={handleIcon}>{favouriteColour}</div>
+                    <input
+                      type="checkbox"
+                      name=""
+                      id=""
+                      className="pointerCursorStyle"
+                    />
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div className="col-3 b">
+            <div className="newPropertyImageDdivCard">
+              <div className="newPropertyImageDdiv">
+                <img src={redHouse} alt="" />
+              </div>
+              <div className="content">
+                <div className="price">
+                  <p className="fw-bolder rounded-2 priceAmount">
+                    ₦7,567,854,000
+                  </p>
+                  <p className="saleDetails text-white px-3 fw-bolder ms-3 mt-1 rounded-pill bg-succes">
+                    For Sale
+                  </p>
+                </div>
+                <div className="propertyinformation lh-1">
+                  <h4 className=" text-white">4 Bedroom duplex</h4>
+                  <div className="d-flex column-gap-3 lh-1">
+                    <p className=" fw-bold text-white">
+                      <FontAwesomeIcon icon={faBed} className="me-2 fw-bold" />7
+                    </p>
+                    <p className=" fw-bold text-white">
+                      <FontAwesomeIcon
+                        icon={faBath}
+                        className="me-2  fw-bold"
+                      />
+                      7
+                    </p>
+                    <p className=" fw-bold text-white">
+                      <i class="bi bi-arrows-fullscreen me-2  fw-bolder"></i>
+                      500sqm
+                    </p>
+                    <button className="rounded-pill px-3 border-2  bg-transparent text-white d-flex align-items-center">
+                      <i class="bi bi-telephone-outbound-fill text-success"></i>
+                    </button>
+                  </div>
+                  <div className="d-flex align-items-center column-gap-2">
+                    <div className="newPropertyAgentDiv">
+                      <img src={propertyDev} alt="" />
+                    </div>
+                    <h6 className="text-white">ziff Properties</h6>
+                    <button className="px-4 py-1  rounded-pill border-2 bg-transparent">
+                      <i class="bi bi-whatsapp text-success fw-bolder"></i>
+                    </button>
+                  </div>
+                  <div className="mt-2 d-flex column-gap-3 align-items-center">
+                    <button className="px-3 rounded-pill bg-transparent text-white py-1 fw-bold">
+                      <em>View more Details</em>{" "}
+                      <i class="bi bi-arrow-right-circle"></i>
+                    </button>
+                    <div onClick={handleIcon}>{favouriteColour}</div>
+                    <input
+                      type="checkbox"
+                      name=""
+                      id=""
+                      className="pointerCursorStyle"
+                    />
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div className="col-3 b">
+            <div className="newPropertyImageDdivCard">
+              <div className="newPropertyImageDdiv">
+                <img src={redHouse} alt="" />
+              </div>
+              <div className="content">
+                <div className="price">
+                  <p className="fw-bolder rounded-2 priceAmount">
+                    ₦7,567,854,000
+                  </p>
+                  <p className="saleDetails text-white px-3 fw-bolder ms-3 mt-1 rounded-pill bg-succes">
+                    For Sale
+                  </p>
+                </div>
+                <div className="propertyinformation lh-1">
+                  <h4 className=" text-white">4 Bedroom duplex</h4>
+                  <div className="d-flex column-gap-3 lh-1">
+                    <p className=" fw-bold text-white">
+                      <FontAwesomeIcon icon={faBed} className="me-2 fw-bold" />7
+                    </p>
+                    <p className=" fw-bold text-white">
+                      <FontAwesomeIcon
+                        icon={faBath}
+                        className="me-2  fw-bold"
+                      />
+                      7
+                    </p>
+                    <p className=" fw-bold text-white">
+                      <i class="bi bi-arrows-fullscreen me-2  fw-bolder"></i>
+                      500sqm
+                    </p>
+                    <button className="rounded-pill px-3 border-2  bg-transparent text-white d-flex align-items-center">
+                      <i class="bi bi-telephone-outbound-fill text-success"></i>
+                    </button>
+                  </div>
+                  <div className="d-flex align-items-center column-gap-2">
+                    <div className="newPropertyAgentDiv">
+                      <img src={propertyDev} alt="" />
+                    </div>
+                    <h6 className="text-white">ziff Properties</h6>
+                    <button className="px-4 py-1  rounded-pill border-2 bg-transparent">
+                      <i class="bi bi-whatsapp text-success fw-bolder"></i>
+                    </button>
+                  </div>
+                  <div className="mt-2 d-flex column-gap-3 align-items-center">
+                    <button className="px-3 rounded-pill bg-transparent text-white py-1 fw-bold">
+                      <em>View more Details</em>{" "}
+                      <i class="bi bi-arrow-right-circle"></i>
+                    </button>
+                    <div onClick={handleIcon}>{favouriteColour}</div>
+                    <input
+                      type="checkbox"
+                      name=""
+                      id=""
+                      className="pointerCursorStyle"
+                    />
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          </div>
         </div>
-      </div> */}
+      </div>
     </>
   );
 };
