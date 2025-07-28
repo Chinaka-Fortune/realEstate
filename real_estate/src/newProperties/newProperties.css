@@ -18,7 +18,7 @@
 
  .newPropertyImageDdivCard {
     position: relative;
-    width: 300px;
+    width: 280px;
     height: 380px;
     /* background-color: yellow; */
     display: flex;
@@ -125,4 +125,5 @@
  
  .newPropertyContaner{
    width: 95%;
+   row-gap: 2.3rem;
  }

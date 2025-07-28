@@ -4,6 +4,9 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faBed, faBath } from "@fortawesome/free-solid-svg-icons";
 import propertyDev from "./newPropImages/Property-Development-Fateck-4.jpg";
 import redHouse from "./newPropImages/redHouse.jpg";
+import newlyBuilt from "./newPropImages/13-Most-Expensive-Houses-In-Lagos.jpeg";
+import house1 from './newPropImages/house1.jpg'
+
 import "./newProperties.css";
 import "../index.css";
 const NewProperties = () => {
@@ -27,8 +30,8 @@ const NewProperties = () => {
 
       <div className="container-fluid mt-5">
         <div className="row">
-          <div className=" d-flex flex-wrap newPropertyContaner mx-auto justify-content-between align-items-center row-gap-3">
-            <div className="col-3 ">
+          <div className="newPropertyContaner mx-auto align-contents-center d-flex flex-wrap">
+            <div className="col-3 d-flex justify-content-center">
               <div className="newPropertyImageDdivCard">
                 <div className="newPropertyImageDdiv">
                   <img src={redHouse} alt="" />
@@ -45,7 +48,7 @@ const NewProperties = () => {
                   <div className="propertyinformation row lh-1">
                     <div className="col-9 mt-1 lh-1">
                       <p className=" text-white fw-bolder">4 Bedroom duplex</p>
-                      <div className="d-flex column-gap-3 lh-1">
+                      <div className="d-flex column-gap-2 lh-1">
                         <p className=" fw-bold text-white">
                           <FontAwesomeIcon
                             icon={faBed}
@@ -73,7 +76,7 @@ const NewProperties = () => {
                       </div>
                       <div className="mt-2 d-flex column-gap-3 align-items-center">
                         <button className="px-3 rounded-pill bg-transparent text-white py-1 fw-bold">
-                          <em>View more Details</em>{" "}
+                          <em>more Details</em>{" "}
                           <i class="bi bi-arrow-right-circle"></i>
                         </button>
                       </div>
@@ -98,10 +101,10 @@ const NewProperties = () => {
                 </div>
               </div>
             </div>
-            <div className="col-3 ">
+            <div className="col-3 d-flex justify-content-center">
               <div className="newPropertyImageDdivCard">
                 <div className="newPropertyImageDdiv">
-                  <img src={redHouse} alt="" />
+                  <img src={newlyBuilt} alt="" />
                 </div>
                 <div className="content">
                   <div className="price">
@@ -115,7 +118,7 @@ const NewProperties = () => {
                   <div className="propertyinformation row lh-1">
                     <div className="col-9 mt-1 lh-1">
                       <p className=" text-white fw-bolder">4 Bedroom duplex</p>
-                      <div className="d-flex column-gap-3 lh-1">
+                      <div className="d-flex column-gap-2 lh-1">
                         <p className=" fw-bold text-white">
                           <FontAwesomeIcon
                             icon={faBed}
@@ -143,7 +146,7 @@ const NewProperties = () => {
                       </div>
                       <div className="mt-2 d-flex column-gap-3 align-items-center">
                         <button className="px-3 rounded-pill bg-transparent text-white py-1 fw-bold">
-                          <em>View more Details</em>{" "}
+                          <em> more Details</em>{" "}
                           <i class="bi bi-arrow-right-circle"></i>
                         </button>
                       </div>
@@ -168,7 +171,7 @@ const NewProperties = () => {
                 </div>
               </div>
             </div>
-            <div className="col-3 b">
+            <div className="col-3 d-flex justify-content-center">
               <div className="newPropertyImageDdivCard">
                 <div className="newPropertyImageDdiv">
                   <img src={redHouse} alt="" />
@@ -185,7 +188,7 @@ const NewProperties = () => {
                   <div className="propertyinformation row lh-1">
                     <div className="col-9 mt-1 lh-1">
                       <p className=" text-white fw-bolder">4 Bedroom duplex</p>
-                      <div className="d-flex column-gap-3 lh-1">
+                      <div className="d-flex column-gap-2 lh-1">
                         <p className=" fw-bold text-white">
                           <FontAwesomeIcon
                             icon={faBed}
@@ -213,7 +216,7 @@ const NewProperties = () => {
                       </div>
                       <div className="mt-2 d-flex column-gap-3 align-items-center">
                         <button className="px-3 rounded-pill bg-transparent text-white py-1 fw-bold">
-                          <em>View more Details</em>{" "}
+                          <em>more Details</em>{" "}
                           <i class="bi bi-arrow-right-circle"></i>
                         </button>
                       </div>
@@ -238,15 +241,15 @@ const NewProperties = () => {
                 </div>
               </div>
             </div>
-            <div className="col-3 b">
+            <div className="col-3 d-flex justify-content-center">
               <div className="newPropertyImageDdivCard">
                 <div className="newPropertyImageDdiv">
-                  <img src={redHouse} alt="" />
+                  <img src={house1} alt="" />
                 </div>
                 <div className="content">
                   <div className="price">
                     <p className="fw-bolder rounded-2 priceAmount">
-                      ₦7,567,854,000
+                      ₦2,007,134,000
                     </p>
                     <p className="saleDetails text-white px-3 fw-bolder ms-3 mt-1 rounded-pill bg-succes">
                       For Sale
@@ -254,8 +257,8 @@ const NewProperties = () => {
                   </div>
                   <div className="propertyinformation row lh-1">
                     <div className="col-9 mt-1 lh-1">
-                      <p className=" text-white fw-bolder">4 Bedroom duplex</p>
-                      <div className="d-flex column-gap-3 lh-1">
+                      <p className=" text-white fw-bolder">semi finished duplex</p>
+                      <div className="d-flex column-gap-2 lh-1">
                         <p className=" fw-bold text-white">
                           <FontAwesomeIcon
                             icon={faBed}
@@ -283,7 +286,7 @@ const NewProperties = () => {
                       </div>
                       <div className="mt-2 d-flex column-gap-3 align-items-center">
                         <button className="px-3 rounded-pill bg-transparent text-white py-1 fw-bold">
-                          <em>View more Details</em>{" "}
+                          <em>more Details</em>{" "}
                           <i class="bi bi-arrow-right-circle"></i>
                         </button>
                       </div>
@@ -308,7 +311,7 @@ const NewProperties = () => {
                 </div>
               </div>
             </div>
-            <div className="col-3 b">
+            <div className="col-3 d-flex justify-content-center">
               <div className="newPropertyImageDdivCard">
                 <div className="newPropertyImageDdiv">
                   <img src={redHouse} alt="" />
@@ -325,7 +328,7 @@ const NewProperties = () => {
                   <div className="propertyinformation row lh-1">
                     <div className="col-9 mt-1 lh-1">
                       <p className=" text-white fw-bolder">4 Bedroom duplex</p>
-                      <div className="d-flex column-gap-3 lh-1">
+                      <div className="d-flex column-gap-2 lh-1">
                         <p className=" fw-bold text-white">
                           <FontAwesomeIcon
                             icon={faBed}
@@ -353,7 +356,7 @@ const NewProperties = () => {
                       </div>
                       <div className="mt-2 d-flex column-gap-3 align-items-center">
                         <button className="px-3 rounded-pill bg-transparent text-white py-1 fw-bold">
-                          <em>View more Details</em>{" "}
+                          <em>more Details</em>{" "}
                           <i class="bi bi-arrow-right-circle"></i>
                         </button>
                       </div>
@@ -378,7 +381,6 @@ const NewProperties = () => {
                 </div>
               </div>
             </div>
-            
           </div>
         </div>
       </div>
