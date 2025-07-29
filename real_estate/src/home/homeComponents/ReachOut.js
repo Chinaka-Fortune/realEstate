@@ -10,7 +10,7 @@ const ReachOut = () => {
           <i class="bi bi-buildings  fs-2 text-dark"></i>
           <span className="text-dark">New Properties</span>
         </NavLink>
-        <NavLink className="col-md-2 col-5 py-4 py-md-5 text-center fw-bold rounded  d-flex flex-column text-decoration-none reachOutHover">
+        <NavLink to="/agent_file" className="col-md-2 col-5 py-4 py-md-5 text-center fw-bold rounded  d-flex flex-column text-decoration-none reachOutHover">
           <i class="bi bi-person-lines-fill fs-2 text-dark"></i>
           <span className="text-dark">Contact Agent</span>
         </NavLink>
