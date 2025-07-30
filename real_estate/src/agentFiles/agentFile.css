@@ -1,0 +1,81 @@
+.searchAgents {
+    width: 100%;
+    height: 20vh;
+    box-shadow: 5px 5px 10px #babecc,
+        -5px -5px 10px #fff;
+}
+
+.searchConAgent {
+    border-top: .12rem solid #babecc;
+}
+
+.Agentcontainer{
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 100px 50px;
+    padding: 100px 50px;
+}
+
+.Agentcontainer .card{
+    position: relative;
+    display: flex;
+    align-items:center;
+    justify-content: flex-start;
+    width: 200px;
+    height: 260px;
+    background-color: white;
+    box-shadow: 5px 5px 10px #babecc,
+   -5px -5px 10px #fff;
+   border-radius: 20px;
+   transition: .5s;
+}
+
+.Agentcontainer .card:hover{
+    height: 300px;
+}
+
+.Agentcontainer .card .imgDiv{
+    position: absolute;
+    width: 165px;
+    height: 190px;
+    background-color: #333;
+    top: 20px;
+    border-radius: 12px;
+    overflow: hidden;
+    transition: .5s;
+}
+
+.Agentcontainer .card:hover .imgDiv{
+    top: -50px;
+    scale: 0.75;
+    box-shadow: o 15px 45px rgba(0,0,0,.2);
+}
+
+.Agentcontainer .card .imgDiv img{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    aspect-ratio: 3/2;
+}
+
+.Agentcontainer .card .content{
+    top: 217px;
+    position: absolute;
+    width: 100%;
+    height: 35px;
+    overflow: hidden;
+    padding: 0 30px;
+    text-align: center;
+    transition: .5s;
+}
+
+.Agentcontainer .card:hover .content{
+    top: 130px;
+    height: 250px;
+}
