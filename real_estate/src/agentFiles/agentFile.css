@@ -15,8 +15,8 @@
     justify-content: center;
     align-items: center;
     flex-wrap: wrap;
-    gap: 100px 50px;
-    padding: 100px 50px;
+    gap: 50px 0;
+    padding: 100px 24px;
 }
 
 .Agentcontainer .card{
@@ -24,8 +24,8 @@
     display: flex;
     align-items:center;
     justify-content: flex-start;
-    width: 200px;
-    height: 260px;
+    width: 90%;
+    height: 300px;
     background-color: white;
     box-shadow: 5px 5px 10px #babecc,
    -5px -5px 10px #fff;
@@ -39,8 +39,8 @@
 
 .Agentcontainer .card .imgDiv{
     position: absolute;
-    width: 165px;
-    height: 190px;
+    width: 250px;
+    height: 235px;
     background-color: #333;
     top: 20px;
     border-radius: 12px;
@@ -49,7 +49,7 @@
 }
 
 .Agentcontainer .card:hover .imgDiv{
-    top: -50px;
+    top: -80px;
     scale: 0.75;
     box-shadow: o 15px 45px rgba(0,0,0,.2);
 }
@@ -65,7 +65,7 @@
 }
 
 .Agentcontainer .card .content{
-    top: 217px;
+    top: 260px;
     position: absolute;
     width: 100%;
     height: 35px;
@@ -76,6 +76,20 @@
 }
 
 .Agentcontainer .card:hover .content{
-    top: 130px;
+    top: 140px;
     height: 250px;
+}
+
+/* .iconNavLink */
+
+@media (min-width:768px) {
+    .Agentcontainer{
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 100px 50px;
+    padding: 100px 50px;
+}
 }
