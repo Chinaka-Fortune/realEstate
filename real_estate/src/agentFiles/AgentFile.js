@@ -1,5 +1,5 @@
 import React from "react";
-import { NavLink } from "react-router-dom";
+import { Link } from "react-router-dom";
 import "./agentFile.css";
 import "../index.css";
 import defaultEstate from "./agentFileImage/default-estate-agents-for-residential-rental-9.avif";
@@ -15,45 +15,25 @@ const AgentFile = () => {
         <button></button>
       </div>
 
-      <div className="Agentcontainer mt-5 d-flex ">
-        <div className="card">
-          <div className="imgDiv">
-            <img src={defaultEstate} alt="" />
-          </div>
-          <div className="content">
-            <h3> <i class="bi bi-person-circle"></i> benedict <i bi bi-facebook></i></h3>
-            <h5><i class="bi bi-geo-alt-fill"></i> Lagos Nigeria</h5>
-            <button type="button" className=" rounded-pill px-4 py-1">Posted {16} property(ies)</button>
-            <div className="d-flex justify-content-center gap-3">
-              <NavLink to='' className="iconNavLink p-2 border border-secondary rounded-circle "><i class="bi bi-facebook fw-bolder"></i></NavLink>
-              <NavLink to='' className="iconNavLink p-2 border border-secondary rounded-circle "><i class="bi bi-whatsapp fw-bolder"></i></NavLink>
-              <NavLink to='' className="iconNavLink p-2 border border-secondary rounded-circle "><i class="bi bi-twitter-x fw-bolder"></i></NavLink>
-              <NavLink to='' className="iconNavLink p-2 border border-secondary rounded-circle "><i class="bi bi-instagram fw-bolder"></i></NavLink>
-              <NavLink to='' className="iconNavLink p-2 border border-secondary rounded-circle "><i class="bi bi-linkedin fw-bolder"></i></NavLink>
-              <NavLink to='' className="iconNavLink p-2 border border-secondary rounded-circle "><i class="bi bi-telegram fw-bolder"></i></NavLink>
+      <div className="Agentcontainer container mt-3">
+        <div className="row">
+        <div className="col-2 colDiv position-relative rounded-3">
+          <figure className="figureDiv rounded position-relative ">
+            <img src={defaultEstate} alt="" className="rounded"/>
+          </figure>
+          <figcaption className="position-absolute  fig-caption">
+            <h5> <i class="bi bi-person"></i> idio Benedict </h5>
+            <h6><i class="bi bi-geo-alt"></i> Lagos, Nigeria</h6>
+            <div className="icons d-flex flex-colum align-items-center justify-content-around w-75 mx-auto my-3">
+              <Link><i className="bi bi-facebook fw-bolder fs-6 border border-2 rounded-circle p-1"></i></Link>
+              <Link><i className="bi bi-instagram fw-bolder fs-6 border border-2 rounded-circle p-1"></i></Link>
+              <Link><i className="bi bi-whatsapp fw-bolder fs-6 border border-2 rounded-circle p-1"></i></Link>
+              <Link><i className="bi bi-twitter-x fw-bolder fs-6 border border-2 rounded-circle p-1"></i></Link> 
             </div>
-          </div>
+            <button type="button" className="rounded-pill border-0 px- py-1 px-3 ms-1 fw-bold btn-muted btn btn-sm btn-primary mx-auto">posted {7} properties</button>
+          </figcaption>
         </div>
-        <div className="card">
-          <div className="imgDiv">
-            <img src={defaultEstate} alt="" />
-          </div>
-          <div className="content"></div>
-        </div>
-        <div className="card">
-          <div className="imgDiv">
-            <img src={defaultEstate} alt="" />
-          </div>
-          <div className="content">
-            <h3>benedict <i bi bi-facebook></i></h3>
-            <h5>Lagos Nigeria</h5>
-            <div>
-              <NavLink to=''><i bi bi-twitter></i></NavLink>
-              <NavLink to=''></NavLink>
-              <NavLink to=''></NavLink>
-              <NavLink to=''></NavLink>
-            </div>
-          </div>
+         
         </div>
       </div>
     </>
