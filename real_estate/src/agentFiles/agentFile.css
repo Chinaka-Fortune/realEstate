@@ -1,17 +1,22 @@
-.searchAgents {
-    width: 100%;
-    height: 20vh;
+.container-top{
+    margin-top: 4rem;
+}
+
+.searchConAgent input, .searchConAgent button{
     box-shadow: 5px 5px 10px #babecc,
         -5px -5px 10px #fff;
+        outline:0;
 }
 
-.searchConAgent {
-    border-top: .12rem solid #babecc;
+.Agentcontainer{
+    width: 97%;
+    column-gap: 2.5rem;
+    row-gap: 1.5rem;
+    justify-content: center;
 }
-
 .colDiv .figureDiv{
-    width: 215px;
-    height: 250px;
+    width: 320px;
+    height: 330px;
     overflow: hidden;
    box-shadow: 5px 5px 10px #babecc,
    -5px -5px 10px #fff;
@@ -26,16 +31,29 @@
 }
 
 .colDiv:hover .figureDiv img{
-    width: 300px;
-    height: 350px;
+    width: 400px;
+    height: 450px;
     filter: contrast(0.8);
     filter: blur(1px);
 }
 
+.colDiv:hover .figureDiv h4{
+    display: none;
+}
+
+.figureDiv h4{
+    position: absolute;
+    font-size: 2rem;
+    padding: 0 1rem;
+    left: 50%;
+    top: 80%;
+    transform: translate(-50%, -50%);
+}
+
 .colDiv .fig-caption{
-   width: 190px;
+   width: 280px;
    height: 85%;
-   top: 10px;
+   top: 18px;
    display: flex;
    border-radius: 10px;
    justify-content: center;
@@ -49,11 +67,79 @@
 
 .colDiv:hover .fig-caption{
     display: block;
-    /* background-color: rgba(0,0,0,0.1); */
 }
 
 .colDiv{
     display: flex;
     justify-content: center;
     width: fit-content;
+}
+
+.colDiv h5{
+    font-size: 2rem;
+}
+.colDiv h6{
+    font-size: 1.5rem;
+}
+.colDiv .icons .navlinks i{
+    font-size: 1.5rem;
+    color: #fff;
+}
+.colDiv .icons .navlinks i:hover{
+    
+    color: blue;
+}
+
+@media (max-width:480px) {
+    .colDiv .figureDiv{
+    width: 300px;
+    height: 330px;
+}
+}
+
+@media (min-width:768px) {
+    .Agentcontainer{
+    width: 100%;
+    column-gap: 2.5rem;
+    row-gap: 1.5rem;
+    justify-content: center;
+}
+
+    .colDiv .figureDiv{
+    width: 215px;
+    height: 250px;
+}
+
+.colDiv:hover .figureDiv img{
+    width: 300px;
+    height: 350px;
+}
+
+.colDiv .fig-caption{
+   width: 190px;
+   height: 85%;
+   top: 10px;
+}
+
+.colDiv h5{
+    font-size: 1rem;
+}
+.colDiv h6{
+    font-size: .7rem;
+}
+.colDiv .icons .navlinks i{
+    font-size: 1rem;
+}
+}
+
+@media (min-width:1200px) {
+.colDiv h5{
+    font-size: 1.3rem;
+}
+.colDiv h6{
+    font-size: .9rem;
+}
+.colDiv .icons .navlinks i{
+    font-size: 1rem;
+}
 }
