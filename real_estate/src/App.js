@@ -5,6 +5,7 @@ import Home from './home/Home';
 import PopularDetails from './popularHomeDetails/PopularDetails';
 import NewProperties from './newProperties/NewProperties';
 import AgentFile from './agentFiles/AgentFile';
+import AgentPost from './agentFiles/AgentPost';
 
 
 
@@ -17,7 +18,7 @@ function App() {
       <Route path='/popularDetails' Component={PopularDetails} />
       <Route path='/newProperties' Component={NewProperties} />
       <Route path='/agent_file' Component={AgentFile} />
-      
+      <Route path='/agentPost' Component={AgentPost} />
     </Routes>
     </BrowserRouter>
   );

@@ -90,10 +90,66 @@
     color: blue;
 }
 
+.agentPostImage{
+    width: fit-content;
+    height: 100%;
+}
+.agentPostImage img{
+width: 100%;
+height: 100%;
+object-fit: cover;
+}
+
+.agentPostImage .agentPostImageNavLink{
+    position: absolute;
+    bottom: 2rem;
+    left: 2rem;
+}
+
+.agentPostCol{
+    box-shadow: 5px 5px 10px #babecc,
+   -5px -5px 10px #fff;
+}
+
+.agentPostForSaleDetails{
+    box-shadow: 5px 5px 5px #babecc ,
+   -5px -5px 10px #fff ;
+}
+
+.agentMiniPic{
+    width: 5rem;
+    height: 5rem;
+}
+.agentMiniPic img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+
+}
+.bi.bi-whatsapp,.bi.bi-telephone,.bi.bi-heart{
+    color: #333;
+}
+.bi.bi-whatsapp:hover,.bi.bi-telephone:hover{
+    color: green;
+}
+
+.bi.bi-heart:hover{color: red;}
+
 @media (max-width:480px) {
     .colDiv .figureDiv{
     width: 300px;
     height: 330px;
+}
+
+.agentMiniPic{
+    width: 3rem;
+    height: 3rem;
+}
+
+.agentPostImage .agentPostImageNavLinkton{
+    position: absolute;
+    bottom: 2rem;
+    left: 1rem;
 }
 }
 
@@ -133,6 +189,9 @@
 }
 
 @media (min-width:1200px) {
+    .agentPostBigScreenWidth{
+    width: 75%;
+}
 .colDiv h5{
     font-size: 1.3rem;
 }
