@@ -1,0 +1,59 @@
+
+.formField input,.formField textarea{
+    border: none;
+    outline: none;
+    background-color: transparent;
+    color: #555;
+    font-size: 18px;
+    padding: 10px 10px 10px 5px;
+    width: 100%;
+    border: none;
+}
+.contactRow{
+    height: 100vh;
+    
+}
+.mu{
+    height: 100vh;
+}
+.formField textarea{
+    height: 150px;
+    resize: none;
+}
+
+.contactShadow{
+     box-shadow: inset 8px 8px 8px #ecf0f3, inset -8px -8px 8px #fff;
+}
+
+.form-group{
+    width: 46%;
+    float: left;
+    padding: 0px 30px;
+    margin: 14px 12px;
+    border-radius: 25px;
+    box-shadow: inset 8px 8px 8px #ecf0f3, inset -8px -8px 8px #fff;
+}
+
+.formField .form-group:last-child{
+    width: 96%;
+}
+
+.submitButton{
+    width: 96%;
+    height: 60px;
+    margin: 0 12px;
+    border-radius: 30px;
+    font-size: 20px;
+    font-weight: 700;
+    outline: none;
+    cursor: pointer;
+    color: white;
+    text-align: center;
+    background-color: slategrey;
+    box-shadow: 3px 3px 8px #b1b1b1, -3px -3px 8px white;
+    transition: .5s;
+}
+
+.submitButton:hover{
+background-color: #31279d;
+}

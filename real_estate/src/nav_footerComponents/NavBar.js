@@ -147,6 +147,14 @@ const NavBar = () => {
                   Contact Us
                 </NavLink>
               </li>
+              <li className="nav-item">
+                <NavLink
+                  to="/favourite"
+                  className="nav-link  fw-bolder text-white FindAperfectText"
+                >
+                 <i className="bi bi-heart-fill text-danger">20</i>
+                </NavLink>
+              </li>
             </ul>
           </div>
         </div>

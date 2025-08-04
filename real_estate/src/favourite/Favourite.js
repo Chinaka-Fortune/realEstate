@@ -3,18 +3,24 @@ import usingImage from "../newProperties/newPropImages/redSearch.jpeg";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faBed, faBath } from "@fortawesome/free-solid-svg-icons";
 import { NavLink } from "react-router-dom";
-import "./agentFile.css";
+import "../agentFiles/agentFile.css";
 import "../index.css";
 
-const AgentPost = () => {
+const Favourite = () => {
   return (
-    <div className="container-fluid ">
+    <div className="container-fluid mt-5">
       <div className="row row-gap-4">
+        <h2 className="fw-bolder ps-md-5">Your Fourites</h2>
         <div className="d-sm-flex agentPostBigScreenWidth mx-auto justify-content-center ">
           <div className="col-md-6 col-lg-5 col-sm-6 agentPostCol">
             <figure className="agentPostImage position-relative">
               <img src={usingImage} alt="" />
-              <NavLink to='/popularDetails' className="rounded-pill border-0 px-3 agentBtn text-decoration-none text-dark agentPostImageNavLink">View More</NavLink >
+              <NavLink
+                to="/popularDetails"
+                className="rounded-pill border-0 px-3 agentBtn text-decoration-none text-dark agentPostImageNavLink"
+              >
+                View More
+              </NavLink>
             </figure>
           </div>
           <div className="col-md-6 col-lg-5 col-sm-6  agentPostCol p-3">
@@ -42,10 +48,14 @@ const AgentPost = () => {
                   <span className="text-muted">2 weeks ago</span>
                 </p>
               </div>
-              <div className="col d-flex align-items-center">
-                <figure className="agentMiniPic agentPostForSaleDetails rounded-circle">
+              <div className="col-3 d-flex align-items-center">
+                <NavLink
+                  to="/agentPost"
+                  className="agentMiniPic agentPostForSaleDetails rounded-circle text-decoration-none"
+                >
                   <img src={usingImage} alt="" className="rounded-circle" />
-                </figure>
+                  <p className="text-dark text-truncate">Benedict idio</p>
+                </NavLink>
               </div>
             </div>
             <div>
@@ -74,4 +84,4 @@ const AgentPost = () => {
   );
 };
 
-export default AgentPost;
+export default Favourite;
