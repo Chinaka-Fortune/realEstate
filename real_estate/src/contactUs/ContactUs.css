@@ -26,7 +26,7 @@
 }
 
 .form-group{
-    width: 46%;
+    width: 100%;
     float: left;
     padding: 0px 30px;
     margin: 14px 12px;
@@ -37,6 +37,7 @@
 .formField .form-group:last-child{
     width: 96%;
 }
+
 
 .submitButton{
     width: 96%;
@@ -56,4 +57,40 @@
 
 .submitButton:hover{
 background-color: #31279d;
+}
+
+.contactAgentImage{
+    height: 100vh;
+    /* width: fit-content; */
+}
+
+.contactAgentImage img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+@media (max-width:480px) {
+    .contact-gap{
+        gap: 2rem;
+    }
+
+    .contactAgentImage{
+    height: 50vh;
+    width: 100%;
+}
+}
+@media (min-width:768px) {
+    .form-group{
+    width: 100%;  
+}
+
+.contact-gap{
+        gap: 2rem;
+    }
+}
+@media (min-width:1200px) {
+    .form-group{
+    width:46%;
+}
 }

@@ -1,0 +1,210 @@
+  .propertyBanner {
+    width: 100%;
+    height: 20vh;
+    object-fit: cover;
+ }
+
+ .container-top{
+    margin-top: 4rem;
+}
+
+.searchConAgent input, .searchConAgent button{
+    box-shadow: 5px 5px 10px #babecc,
+        -5px -5px 10px #fff;
+        outline:0;
+}
+
+.Agentcontainer{
+    width: 97%;
+    column-gap: 2.5rem;
+    row-gap: 1.5rem;
+    justify-content: center;
+}
+.colDiv .figureDiv{
+    width: 320px;
+    height: 330px;
+    overflow: hidden;
+   box-shadow: 5px 5px 10px #babecc,
+   -5px -5px 10px #fff;
+}
+
+.colDiv .figureDiv img{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+     transition: 0.5s;
+}
+
+.colDiv:hover .figureDiv img{
+    width: 400px;
+    height: 450px;
+    filter: contrast(0.8);
+    filter: blur(1px);
+}
+
+.colDiv:hover .figureDiv h4{
+    display: none;
+}
+
+.figureDiv h4{
+    position: absolute;
+    font-size: 2rem;
+    padding: 0 1rem;
+    left: 50%;
+    top: 80%;
+    transform: translate(-50%, -50%);
+}
+
+.colDiv .fig-caption{
+   width: 280px;
+   height: 85%;
+   top: 18px;
+   display: flex;
+   border-radius: 10px;
+   justify-content: center;
+   flex-direction: column;
+   align-items: center;
+   border: 3px solid white;
+   padding: 20% 0 0 5px;
+   display: none;
+   transition: 0.5s ease-in;
+}
+
+.colDiv:hover .fig-caption{
+    display: block;
+}
+
+.colDiv{
+    display: flex;
+    justify-content: center;
+    width: fit-content;
+}
+
+.colDiv h5{
+    font-size: 2rem;
+}
+.colDiv h6{
+    font-size: 1.5rem;
+}
+.colDiv .icons .navlinks i{
+    font-size: 1.5rem;
+    color: #fff;
+}
+.colDiv .icons .navlinks i:hover{
+    
+    color: blue;
+}
+
+.agentPostImage{
+    width: fit-content;
+    height: 100%;
+}
+.agentPostImage img{
+width: 100%;
+height: 100%;
+object-fit: cover;
+}
+
+.agentPostImage .agentPostImageNavLink{
+    position: absolute;
+    bottom: 2rem;
+    left: 2rem;
+}
+
+.agentPostCol{
+    box-shadow: 5px 5px 10px #babecc,
+   -5px -5px 10px #fff;
+}
+
+.agentPostForSaleDetails{
+    box-shadow: 5px 5px 5px #babecc ,
+   -5px -5px 10px #fff ;
+}
+
+.agentMiniPic{
+    width: 5rem;
+    height: 5rem;
+}
+.agentMiniPic img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+
+}
+.bi.bi-whatsapp,.bi.bi-telephone,.bi.bi-heart{
+    color: #333;
+}
+.bi.bi-whatsapp:hover,.bi.bi-telephone:hover{
+    color: green;
+}
+
+.bi.bi-heart:hover{color: red;}
+
+@media (max-width:480px) {
+    .colDiv .figureDiv{
+    width: 300px;
+    height: 330px;
+}
+
+.agentMiniPic{
+    width: 3rem;
+    height: 3rem;
+}
+
+.agentPostImage .agentPostImageNavLinkton{
+    position: absolute;
+    bottom: 2rem;
+    left: 1rem;
+}
+}
+
+@media (min-width:768px) {
+    .Agentcontainer{
+    width: 100%;
+    column-gap: 2.5rem;
+    row-gap: 1.5rem;
+    justify-content: center;
+}
+
+    .colDiv .figureDiv{
+    width: 215px;
+    height: 250px;
+}
+
+.colDiv:hover .figureDiv img{
+    width: 300px;
+    height: 350px;
+}
+
+.colDiv .fig-caption{
+   width: 190px;
+   height: 85%;
+   top: 10px;
+}
+
+.colDiv h5{
+    font-size: 1rem;
+}
+.colDiv h6{
+    font-size: .7rem;
+}
+.colDiv .icons .navlinks i{
+    font-size: 1rem;
+}
+}
+
+@media (min-width:1200px) {
+    .agentPostBigScreenWidth{
+    width: 97%;
+}
+.colDiv h5{
+    font-size: 1.3rem;
+}
+.colDiv h6{
+    font-size: .9rem;
+}
+.colDiv .icons .navlinks i{
+    font-size: 1rem;
+}
+}

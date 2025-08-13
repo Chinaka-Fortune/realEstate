@@ -23,6 +23,11 @@
     width: 11.3rem;
 }
 
+.propertiesDropdown:hover .propertiesCaretUl{
+    display: block;
+    margin-top: 2.5rem;
+}
+
 @media (max-width:480px) {
     .NavHamburger{
     font-size:.9rem;

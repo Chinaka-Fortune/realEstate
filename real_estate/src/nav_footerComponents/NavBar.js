@@ -2,18 +2,20 @@ import React from "react";
 import { useState } from "react";
 import { NavLink } from "react-router-dom";
 import "./Navigation.css";
+
 const NavBar = () => {
   const [searchWorkSpaceAmount, setSearchWorkAmount] = useState(null);
   const [searchStoreAmount, setSearchStoreAmount] = useState(null);
   const [searchHallAmount, setSearchHallAmount] = useState(null);
-  const handleWorkSpaceAmountChange = (e) => setSearchWorkAmount(e.target.value);
+  const handleWorkSpaceAmountChange = (e) =>
+    setSearchWorkAmount(e.target.value);
   const handleStoreAmountChange = (e) => setSearchStoreAmount(e.target.value);
   const handleHallAmountChange = (e) => setSearchHallAmount(e.target.value);
 
   return (
     <>
-      <nav class="navbar navbar-expand-lg bg-body-transparent fixed-top px-md-5">
-        <div class="container-fluid px-md-5">
+      <nav class="navbar navbar-expand-lg bg-body-transparent fixed-top px-md-5 ">
+        <div class="container-fluid px-md-5 bg-primary">
           <span className="navbar-brand fw-bolder fs-3 text-primary">
             <em>Ziff</em>ESTATE
           </span>
@@ -41,78 +43,96 @@ const NavBar = () => {
                   Home <i className="bi bi-house-door-fill"></i>
                 </NavLink>
               </li>
-              <li class="nav-item dropdown">
-                <NavLink
-                  to="/properties"
-                  className="nav-link pe-4 fw-bolder dropdown-toggle text-white FindAperfectText"
-                  role="button"
-                  data-bs-toggle="dropdown"
-                  aria-expanded="false"
-                  data-bs-auto-close="outside"
-                >
-                  Properties
-                </NavLink>
-                <ul className="dropdown-menu dropdownMenuColor">
-                  <li>
-                    <NavLink
-                      to="/buy_properties"
-                      className="dropdown-item  text-white border-bottom border-white"
-                    >
-                      Buy properties
-                    </NavLink>
-                  </li>
-                  <li>
-                    <NavLink
-                      to="/sell_properties"
-                      className="dropdown-item  text-white border-bottom border-white"
-                    >
-                      Sell properties
-                    </NavLink>
-                  </li>
-                  <li className="dropend">
-                    <NavLink
-                      className="dropdown-item dropdown-toggle  bg-transparent text-white LiNavLink border-bottom border-white"
-                      data-bs-toggle="dropdown"
-                    >
-                      Rent Properties
-                    </NavLink>
-                    <ul className="dropdown-menu dropdownMenuColor">
-                      <li>
-                        <NavLink
-                          className="dropdown-item bg-transparent border-bottom border-white"
-                          data-bs-toggle="modal"
-                          data-bs-target="#homeRentageModal"
-                          role="button"
-                        >
-                          Home
-                        </NavLink>
-                      </li>
-                      <li>
-                        <NavLink className="dropdown-item bg-transparent border-bottom border-white"
-                        data-bs-toggle="modal"
-                          data-bs-target="#workSpaceRentageModal"
-                          role="button">
-                          Work space
-                        </NavLink>
-                      </li>
-                      <li>
-                        <NavLink className="dropdown-item bg-transparent border-bottom border-white" data-bs-toggle="modal"
-                          data-bs-target="#storeRentageModal"
-                          role="button">
-                          store
-                        </NavLink>
-                      </li>
-                      <li>
-                        <NavLink className="dropdown-item bg-transparent" data-bs-toggle="modal"
-                          data-bs-target="#HallRentageModal"
-                          role="button">
-                          Hall
-                        </NavLink>
-                      </li>
-                    </ul>
-                  </li>
-                </ul>
-              </li>
+
+              <div className="btn-group" role="group">
+                <li class="nav-item">
+                  <NavLink to="/properties" className="text-decoration-none nav-link text-white FindAperfectText fw-bolder">
+                    
+                    Properties
+                  </NavLink>
+                </li>
+
+                <li className="nav-item  d-flex align-center dropdown propertiesDropdown">
+                  <NavLink
+                    to="/properties_drop"
+                    className="nav-link pe-4 fw-bolder text-white FindAperfectText  "
+                    role="button"
+                    data-bs-toggle="dropdown"
+                    aria-expanded="false"
+                    data-bs-auto-close="outside"
+                  >
+                    <i class="bi bi-caret-down-fill fw-bolder fs-4"></i>
+                  </NavLink>
+                  <ul className="dropdown-menu dropdownMenuColor propertiesCaretUl">
+                    <li>
+                      <NavLink
+                        to="/buy_properties"
+                        className="dropdown-item  text-white border-bottom border-white"
+                      >
+                        Buy properties
+                      </NavLink>
+                    </li>
+                    <li>
+                      <NavLink
+                        to="/sell_properties"
+                        className="dropdown-item  text-white border-bottom border-white"
+                      >
+                        Sell properties
+                      </NavLink>
+                    </li>
+                    <li className="dropend">
+                      <NavLink
+                        className="dropdown-item dropdown-toggle  bg-transparent text-white LiNavLink border-bottom border-white"
+                        data-bs-toggle="dropdown"
+                      >
+                        Rent Properties
+                      </NavLink>
+                      <ul className="dropdown-menu dropdownMenuColor">
+                        <li>
+                          <NavLink
+                            className="dropdown-item bg-transparent border-bottom border-white"
+                            data-bs-toggle="modal"
+                            data-bs-target="#homeRentageModal"
+                            role="button"
+                          >
+                            Home
+                          </NavLink>
+                        </li>
+                        <li>
+                          <NavLink
+                            className="dropdown-item bg-transparent border-bottom border-white"
+                            data-bs-toggle="modal"
+                            data-bs-target="#workSpaceRentageModal"
+                            role="button"
+                          >
+                            Work space
+                          </NavLink>
+                        </li>
+                        <li>
+                          <NavLink
+                            className="dropdown-item bg-transparent border-bottom border-white"
+                            data-bs-toggle="modal"
+                            data-bs-target="#storeRentageModal"
+                            role="button"
+                          >
+                            store
+                          </NavLink>
+                        </li>
+                        <li>
+                          <NavLink
+                            className="dropdown-item bg-transparent"
+                            data-bs-toggle="modal"
+                            data-bs-target="#HallRentageModal"
+                            role="button"
+                          >
+                            Hall
+                          </NavLink>
+                        </li>
+                      </ul>
+                    </li>
+                  </ul>
+                </li>
+              </div>
               <li className="nav-item">
                 <NavLink
                   to="/service"
@@ -152,7 +172,7 @@ const NavBar = () => {
                   to="/favourite"
                   className="nav-link  fw-bolder text-white FindAperfectText"
                 >
-                 <i className="bi bi-heart-fill text-danger">20</i>
+                  <i className="bi bi-heart-fill text-danger">20</i>
                 </NavLink>
               </li>
             </ul>
@@ -250,7 +270,12 @@ const NavBar = () => {
                           <option value="3">Ajeromi-Ifelodun</option>
                         </select>
                       </div>
-                      <button type="button" className="rounded btn btn-primary w-50 mx-auto mt-3">Search</button>
+                      <button
+                        type="button"
+                        className="rounded btn btn-primary w-50 mx-auto mt-3"
+                      >
+                        Search
+                      </button>
                     </form>
                   </div>
                 </div>
@@ -314,7 +339,7 @@ const NavBar = () => {
                           <option value="3">Apapa</option>
                           <option value="3">Ajeromi-Ifelodun</option>
                         </select>
-                        
+
                         <select
                           class="form-select   normalFirstAnimationRight"
                           aria-label="Default select example"
@@ -325,14 +350,23 @@ const NavBar = () => {
                           <option value="3">iyana ipaja</option>
                           <option value="3">idimu</option>
                           <option value="3">isheri</option>
-                        </select>                       
+                        </select>
                       </div>
                       <div className="d-flex column-gap-3">
-                        
-
-                        <input type="number" placeholder="Price Range" className="rounded amountInput normalFirstAnimationLeft form-control w-100" value={searchWorkSpaceAmount} onChange={handleWorkSpaceAmountChange} />
+                        <input
+                          type="number"
+                          placeholder="Price Range"
+                          className="rounded amountInput normalFirstAnimationLeft form-control w-100"
+                          value={searchWorkSpaceAmount}
+                          onChange={handleWorkSpaceAmountChange}
+                        />
                       </div>
-                      <button type="button" className="rounded btn btn-primary w-50 mx-auto mt-3">Search</button>
+                      <button
+                        type="button"
+                        className="rounded btn btn-primary w-50 mx-auto mt-3"
+                      >
+                        Search
+                      </button>
                     </form>
                   </div>
                 </div>
@@ -408,13 +442,22 @@ const NavBar = () => {
                           <option value="3">idimu</option>
                           <option value="3">isheri</option>
                         </select>
-
-                        
                       </div>
                       <div className="d-flex column-gap-3">
-                        <input type="number" placeholder="Price Range" className="rounded amountInput normalFirstAnimationLeft form-control w-100" value={searchStoreAmount} onChange={handleStoreAmountChange} />
+                        <input
+                          type="number"
+                          placeholder="Price Range"
+                          className="rounded amountInput normalFirstAnimationLeft form-control w-100"
+                          value={searchStoreAmount}
+                          onChange={handleStoreAmountChange}
+                        />
                       </div>
-                      <button type="button" className="rounded btn btn-primary w-50 mx-auto mt-3">Search</button>
+                      <button
+                        type="button"
+                        className="rounded btn btn-primary w-50 mx-auto mt-3"
+                      >
+                        Search
+                      </button>
                     </form>
                   </div>
                 </div>
@@ -489,13 +532,22 @@ const NavBar = () => {
                           <option value="3">idimu</option>
                           <option value="3">isheri</option>
                         </select>
-
-                        
                       </div>
                       <div className="d-flex column-gap-3">
-                        <input type="number" placeholder="Price Range" className="rounded amountInput normalFirstAnimationLeft form-control w-100" value={searchHallAmount} onChange={handleHallAmountChange} />
+                        <input
+                          type="number"
+                          placeholder="Price Range"
+                          className="rounded amountInput normalFirstAnimationLeft form-control w-100"
+                          value={searchHallAmount}
+                          onChange={handleHallAmountChange}
+                        />
                       </div>
-                      <button type="button" className="rounded btn btn-primary w-50 mx-auto mt-3">Search</button>
+                      <button
+                        type="button"
+                        className="rounded btn btn-primary w-50 mx-auto mt-3"
+                      >
+                        Search
+                      </button>
                     </form>
                   </div>
                 </div>

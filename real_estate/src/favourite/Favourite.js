@@ -1,5 +1,5 @@
 import React from "react";
-import usingImage from "../newProperties/newPropImages/redSearch.jpeg";
+import usingImage from "../propertiesFolder/newPropImages/redSearch.jpeg";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faBed, faBath } from "@fortawesome/free-solid-svg-icons";
 import { NavLink } from "react-router-dom";
