@@ -1,4 +1,4 @@
-  .propertyBanner {
+   .propertyBanner {
     width: 100%;
     height: 20vh;
     object-fit: cover;
@@ -8,7 +8,7 @@
     margin-top: 4rem;
 }
 
-.searchConAgent input, .searchConAgent button{
+/*.searchConAgent input, .searchConAgent button{
     box-shadow: 5px 5px 10px #babecc,
         -5px -5px 10px #fff;
         outline:0;
@@ -123,8 +123,8 @@ object-fit: cover;
 }
 
 .agentMiniPic{
-    width: 5rem;
-    height: 5rem;
+    width: 4rem;
+    height: 4rem;
 }
 .agentMiniPic img{
     width: 100%;
@@ -139,9 +139,19 @@ object-fit: cover;
     color: green;
 }
 
-.bi.bi-heart:hover{color: red;}
+.bi.bi-heart:hover{
+    color: red;
+}
 
-@media (max-width:480px) {
+.ggg{
+    gap: 4rem;
+}
+.wit{
+    width: 100%;
+
+}
+
+@media (max-width:320px) {
     .colDiv .figureDiv{
     width: 300px;
     height: 330px;
@@ -207,4 +217,48 @@ object-fit: cover;
 .colDiv .icons .navlinks i{
     font-size: 1rem;
 }
+
+.wit{
+    width: 47%;
+}
+}
+ */
+
+.propertiesContainer{
+    width: 100%;
+    height: 100vh;
+}
+ .propertySubContainer{
+    width:95%;
+    height: 30%;
+    position: relative;
+ }
+ .propertySubContainer img{
+width: 100%;
+height: 100%;
+object-fit: cover;
+border-top-right-radius: 0.3rem;
+border-top-left-radius: 0.3rem;
+/* position: relative; */
+ }
+
+ .propertySubContainer .agentPostImageNavLinkton{
+    position: absolute;
+    top: 50%;
+    transform: translate(-50%,-50%);
+    left: 1rem;
+    z-index: 4;
+}
+
+.propertySubContainerBorder{
+    border-bottom-right-radius: 0.3rem;
+border-bottom-left-radius: 0.3rem;
+}
+
+@media (max-width:320px) {
+  .propertySubContainer{
+    width:95%;
+    height: 50%;
+    position: relative;
+ }  
 }
