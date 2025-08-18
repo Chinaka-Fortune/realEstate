@@ -12,6 +12,7 @@ import ContactAgent from './contactUs/ContactAgent';
 import ContactMarketer from './contactUs/ContactMarketer';
 import Properties from './propertiesFolder/Properties';
 import NewProperties from './propertiesFolder/NewProperties';
+import About from './aboutFolder/About';
 
 
 
@@ -31,6 +32,7 @@ function App() {
       <Route path='/contact_marketer' Component={ContactMarketer} />
       <Route path='properties' Component={Properties} />
       <Route path='newProperties' Component={NewProperties} />
+      <Route path='about' Component={About} />
     </Routes>
     </BrowserRouter>
   );
