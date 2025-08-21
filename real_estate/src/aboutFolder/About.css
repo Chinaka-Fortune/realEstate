@@ -9,21 +9,12 @@ height: auto;
 }
 
 .g{
-    /* display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 70vh; */
     margin-top: 7%;
 }
 
-.triangle {
-        width: 0;
-        height: 0;
-        border-left: 50px solid transparent; /* Left side of the triangle */
-        border-right: 50px solid transparent; /* Right side of the triangle */
-        border-bottom: 100px solid blue;     /* Base of the triangle */
-    }
-
+.informationProperties{
+    width: 95%;
+}
 
 @media (min-width:1024px) {
     .aboutUsBigScreen{

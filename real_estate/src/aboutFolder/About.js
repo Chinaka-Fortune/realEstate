@@ -36,10 +36,10 @@ const About = () => {
         </div>
       </div>
 
-      <div className="row gap-2 d-flex justify-content-center mb-3">
+      <div className="row gap-2 d-flex justify-content-center mb-3 mx-auto informationProperties">
         <div className="col-5 col-lg-2 py-3 bg-primary">
           <h3 className="text-center">4,567</h3>
-          <p className="text-nowrap text-center fw-bold">Houses sold</p>
+          <p className="text-nowrap text-center fw-bold">Houses</p>
         </div>
         <div className="col-5 col-lg-2 bg-primary d-flex align-items-center align-items-center flex-column justify-content-center">
           <h3 className="text-center">44,034</h3>
@@ -47,11 +47,11 @@ const About = () => {
         </div>
         <div className="col-5 col-lg-2 py-3 bg-primary">
           <h3 className="text-center">1,203,004</h3>
-          <p className="text-nowrap text-center fw-bold">Properties</p>
+          <p className="text-nowrap text-center fw-bold">Sold</p>
         </div>
         <div className="col-5 col-lg-2 py-3 bg-primary">
           <h3 className="text-center">4034</h3>
-          <p className="text-nowrap text-center fw-bold">ShortLet rented</p>
+          <p className="text-nowrap text-center fw-bolder">ShortLet</p>
         </div>
       </div>
     </div>
