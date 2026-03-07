@@ -1,0 +1,176 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family:poppins, sans-serif;
+}
+
+.generalPill{
+    width: max-content;
+}
+
+.generalColor{
+    box-shadow:  5px 5px 10px #babecc,
+    -5px -5px 10px #fff ;
+}
+.generalColor2{
+    box-shadow:  5px 5px 10px #babecc,
+    5px 5px 10px #fff ;
+}
+
+.generalColor3{
+    box-shadow:  inset 5px 5px 10px #babecc,
+    inset -5px 10px #fff ;
+   
+}
+
+.generalColor3:hover{
+    box-shadow:  5px 5px 10px #babecc, -5px 10px #fff ;
+     transition: .5s linear;
+}
+
+.cursorStyle{
+    cursor: pointer;
+}
+
+.GeneralBackground{
+    background-color:rgb(231, 154, 57);
+}
+
+.glowBorder{
+    border-color: aliceblue;
+}
+
+.glowBorder:hover{
+    border-color:red;
+}
+
+.general-width{
+    width: 95%;
+}
+
+.buttonColor{
+    background-color: #2a2d96;
+}
+
+.generalTextColor{
+    color: orange;
+}
+
+.generalBtnColor{
+    background-color: orange;
+    transition: .5s all;
+}
+
+.generalBtnColor:hover{
+    background-color: rgba(255, 165, 0,.5);
+}
+
+.dCaptionText, .bePartanimation {
+    animation: appear 2s linear;
+    animation-timeline: view();
+    animation-range: entry 0% cover 40%;
+}
+
+@keyframes appear {
+    from {
+        opacity: 0;
+        clip-path: inset(100% 100% 0 0);
+    }
+
+    to {
+        opacity: 1;
+        clip-path: inset(0 0 0 0);
+    }
+}
+
+.dCaptionText2Anime{
+    animation: appear2 2s linear;
+}
+
+@keyframes appear2 {
+    from {
+        opacity: 0;
+        clip-path: inset(100% 100% 0 0);
+    }
+
+    to {
+        opacity: 1;
+        clip-path: inset(0 0 0 0);
+    }
+}
+
+.ourImpactAnimate {
+    animation: ourLandinAnimate2 2s linear;
+    animation-timeline: view();
+    animation-range: entry 0% cover 40%;
+}
+
+.ourLandinAnimate2 {
+    animation: ourInpactANI 2s linear;
+}
+
+
+@keyframes ourLandinAnimate2 {
+    from {
+        opacity: 0;
+        transform: translateX(-100px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateX(0px);
+    }
+}
+
+@keyframes ourInpactANI {
+    from {
+        opacity: 0;
+        transform: translateX(-100px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateX(0px);
+    }
+}
+
+.ourCoreValueAnimate {
+    animation: ourCoreValueAni 2s linear;
+    animation-timeline: view();
+    animation-range: entry 0% cover 40%;
+}
+
+.scaleAnime {
+    animation: scaleAnime 2s linear;
+}
+
+@keyframes scaleAnime {
+    from {
+        opacity: 0;
+        scale: 0.5;
+    }
+
+    to {
+        opacity: 1;
+        scale: 1;
+    }
+}
+
+.translatinhVertical:hover{
+    transform: translateY(10px);
+   transition: .5s all;
+}
+
+
+@media (min-width:48rem) {
+    .dCaptionText, .bePartanimation {
+    animation: appear 2s linear;
+    animation-timeline: view();
+    animation-range: entry 0% cover 40%;
+}
+}
+
+
+
+

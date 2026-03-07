@@ -1,0 +1,93 @@
+.main-container {
+    width: 100%;
+    min-height: 100vh;
+    background: linear-gradient(10deg, #a566e4, #8641da, #7a77e7, #3a52ec);
+    color: aliceblue;
+    background-repeat: no-repeat;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.formContainer {
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.inputDiv {
+    width: 90vw;
+}
+
+.emailInput, .passwordInput,.loginBtnInput{
+    width: 100%;
+    outline: none;
+    border: none;
+}
+
+input[type ='checkbox']{
+    caret-color: rgb(255, 81, 0);
+    width: 2rem;
+}
+.inputDiv i {
+    top: 50%;
+    right: 0%;
+    transform: translate(-50%, -50%);
+}
+
+.regInputDiv i{
+    top: 50%;
+    right: 5%;
+    transform: translate(-50%, -50%);
+}
+
+.registerText {
+    color: black;
+}
+
+.forgotPassword {
+    color: white;
+}
+
+.registerText:hover,
+.forgotPassword:hover {
+    color: blue;
+}
+
+.dateOfBirthCol input{
+width:80%;
+}
+
+.agentTextArea{
+    resize: none;
+    outline: none;
+}
+
+.agentRegisterSubmitBtn:hover{
+background-color: rgba(245, 245, 220,.3);
+color: antiquewhite;
+}
+
+@media (min-width:768px) {
+    .inputDiv {
+        width: 60vw;
+    }
+
+    .inputDiv i, .regInputDiv i {
+        font-size: 1.5rem;
+    }
+
+    .registerScreen{
+        width: 90%;
+    }
+}
+
+@media (min-width:1200px) {
+    .inputDiv {
+        width: 40vw;
+    }
+
+    .inputDiv i {
+        font-size: 1.5rem;
+    }
+}

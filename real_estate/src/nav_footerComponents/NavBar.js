@@ -14,8 +14,8 @@ const NavBar = () => {
 
   return (
     <>
-      <nav class="navbar navbar-expand-lg bg-body-transparent fixed-top px-md-5 ">
-        <div class="container-fluid px-md-5 bg-primary">
+      <nav class="navbar navbar-expand-lg bg-body-transparent fixed-top px-md-5 bg-dark clientNavBar">
+        <div class="container-fluid px-md-5 d-flex align-items-center">
           <span className="navbar-brand fw-bolder fs-3 text-primary">
             <em>Ziff</em>ESTATE
           </span>
@@ -33,7 +33,7 @@ const NavBar = () => {
             </span>
           </button>
           <div class="collapse navbar-collapse  " id="navbarText">
-            <ul class="navbar-nav mb-2 mb-lg-0 ms-auto ">
+            <ul class="navbar-nav  mb-lg-0 ms-auto mt-3">
               <li class="nav-item pe-4">
                 <NavLink
                   to="/"
@@ -46,8 +46,10 @@ const NavBar = () => {
 
               <div className="btn-group" role="group">
                 <li class="nav-item">
-                  <NavLink to="/properties" className="text-decoration-none nav-link text-white FindAperfectText fw-bolder">
-                    
+                  <NavLink
+                    to="/properties"
+                    className="text-decoration-none nav-link text-white FindAperfectText fw-bolder"
+                  >
                     Properties
                   </NavLink>
                 </li>
@@ -135,7 +137,7 @@ const NavBar = () => {
               </div>
               <li className="nav-item">
                 <NavLink
-                  to="/service"
+                  
                   className="nav-link pe-4 fw-bolder text-white FindAperfectText"
                 >
                   Services{" "}
@@ -144,8 +146,11 @@ const NavBar = () => {
               </li>
               <li class="nav-item">
                 <NavLink
-                  to="/search"
+                
                   className="nav-link pe-4 fw-bolder text-white FindAperfectText"
+                  data-bs-toggle="modal"
+                  data-bs-target="#SearchModal"
+                  role="button"
                 >
                   Search
                   <i className="bi bi-search text-white FindAperfectText"></i>
@@ -173,6 +178,14 @@ const NavBar = () => {
                   className="nav-link  fw-bolder text-white FindAperfectText"
                 >
                   <i className="bi bi-heart-fill text-danger">20</i>
+                </NavLink>
+              </li>
+              <li className="nav-item">
+                <NavLink
+                  to="/login"
+                  className="nav-link  fw-bolder text-white FindAperfectText"
+                >
+                  Login
                 </NavLink>
               </li>
             </ul>
@@ -550,6 +563,41 @@ const NavBar = () => {
                       </button>
                     </form>
                   </div>
+                </div>
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+
+      {/* SEARCH MODAL SECTION */}
+
+      <div
+        className="modal fade"
+        id="SearchModal"
+        tabindex="3"
+        aria-labelledby="exampleModalLabel"
+        aria-hidden="true"
+      >
+        <div className="modal-dialog modal-dialog-centered">
+          <div className="modal-content modalBackGround">
+            <form action="" className="p-md-5 px-2 py-4">
+              <div className="container-fluid">
+                <div className="row">
+                  <form action="">
+                    <input
+                      type="search"
+                      name=""
+                      id=""
+                      placeholder="search something"
+                      className="w-75 rounded-pill py-2 ps-3 pe-2"
+                    />
+                    <input
+                      type="submit"
+                      value="Search"
+                      className="rounded-pill py-2 px-3"
+                    />
+                  </form>
                 </div>
               </div>
             </form>
